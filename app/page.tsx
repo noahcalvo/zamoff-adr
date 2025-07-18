@@ -152,7 +152,7 @@ export default function ZamoffADRLanding() {
               </CardContent>
             </Card>
             <a href="resume.pdf" download>
-            <Card className="border-0 shadow-lg hover:scale-125 transition">
+            <Card className="border-0 shadow-lg hover:scale-110 transition">
               <CardContent className="p-8 text-center">
                 <AlignJustify className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-3">See full experience</h3>
