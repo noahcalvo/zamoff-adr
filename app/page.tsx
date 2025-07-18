@@ -36,7 +36,7 @@ export default function ZamoffADRLanding() {
           </p>
 
           {/* Key Highlights */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <div className="text-3xl font-bold text-blue-200">200+</div>
               <div className="text-sm">Cases Resolved</div>
@@ -55,13 +55,13 @@ export default function ZamoffADRLanding() {
             </div>
           </div>
           <a href="mailto:mitch@zamoffadr.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg rounded-md">
-              Schedule Consultation
+            Schedule Consultation
           </a>
         </div>
       </section>
 
       {/* Navigation Strip */}
-      <Navvy/>
+      <Navvy />
 
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-gray-50">
@@ -152,42 +152,44 @@ export default function ZamoffADRLanding() {
               </CardContent>
             </Card>
             <a href="resume.pdf" download>
-            <Card className="border-0 shadow-lg hover:scale-110 transition">
-              <CardContent className="p-8 text-center">
-                <AlignJustify className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">See full experience</h3>
-                <p className="text-gray-600">
-                  Download CV to view more of Mitch Zamoff&apos;s experience
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="border-0 shadow-lg hover:scale-110 transition">
+                <CardContent className="p-8 text-center">
+                  <AlignJustify className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-3">See full experience</h3>
+                  <p className="text-gray-600">
+                    Download CV to view more of Mitch Zamoff&apos;s experience
+                  </p>
+                </CardContent>
+              </Card>
             </a>
           </div>
         </div>
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="py-20">
+      <section id="expertise" className="py-10  sm:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Areas of Expertise</h2>
+            <Link href="/expertise">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 underline hover:text-blue-600">Areas of Expertise</h2>
+            </Link>
             <p className="text-xl text-gray-600">Comprehensive ADR services across diverse practice areas</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               "Consumer Protection",
               "Contract Disputes",
               "Healthcare Disputes",
               "Employment Issues",
-              "Pharmaceutical Law",              
+              "Pharmaceutical Law",
               "Insurance Disputes",
               "Antitrust & Competition",
               "Complex Disputes"
             ].map((area, index) => {
               const slug = area.toLowerCase().replace(/\s+/g, '-'); // e.g. "Contract Disputes" → "contract-disputes"
               return (
-                <Link key={index} href={`/expertise#${slug}`}>
+                <Link key={index} href={`/expertise#${slug}`} className="text-center">
                   <Badge
                     key={index}
                     variant="outline"
@@ -207,7 +209,9 @@ export default function ZamoffADRLanding() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Healthcare Law Specialist</h2>
+              <Link href="/healthcare" >
+                <h2 className="text-4xl font-bold text-gray-900 mb-6 underline hover:text-blue-600">Healthcare Law Specialist</h2>
+              </Link>
               <p className="text-lg text-gray-700 mb-6">
                 Deep expertise in healthcare disputes, regulatory compliance, and medical malpractice arbitration.
                 Trusted by hospitals, physicians, and healthcare organizations nationwide.
@@ -245,20 +249,27 @@ export default function ZamoffADRLanding() {
             {/* Education */}
             <div id="education">
               <a href="/education">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Education & Training</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">Education & Training</h2>
               </a>
-              <div className="space-y-6">
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-xl font-semibold">J.D., Harvard Law School</h3>
-                  <p className="text-gray-600">Magna Cum Laude, Law Review</p>
+              <div className="space-y-4">
+                <div className="py-3">
+                  <div className="border-l-4 border-blue-600 pl-6">
+                    <h3 className="text-xl font-semibold">J.D., Harvard Law School</h3>
+                    <p className="text-gray-600">Magna Cum Laude, Law Review</p>
+                  </div>
                 </div>
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-xl font-semibold">ADR Certification</h3>
-                  <p className="text-gray-600">American Arbitration Association</p>
+                <div className="py-3">
+                  <div className="border-l-4 border-blue-600 pl-6">
+                    <h3 className="text-xl font-semibold">ADR Certification</h3>
+                    <p className="text-gray-600">American Arbitration Association</p>
+                  </div>
                 </div>
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-xl font-semibold">Mediation Training</h3>
-                  <p className="text-gray-600">Harvard Negotiation Project</p>
+                <div className="py-3">
+
+                  <div className="border-l-4 border-blue-600 pl-6">
+                    <h3 className="text-xl font-semibold">Mediation Training</h3>
+                    <p className="text-gray-600">Harvard Negotiation Project</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -318,13 +329,13 @@ export default function ZamoffADRLanding() {
               </Button>
             </a>
             <a href="resume.pdf" download>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent"
-            >
-              Download CV
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent"
+              >
+                Download CV
+              </Button>
             </a>
           </div>
         </div>
