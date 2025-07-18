@@ -8,10 +8,6 @@ import Link from 'next/link';
 import Navvy from "@/components/ui/navbar";
 
 export default function ZamoffADRLanding() {
-  const downloadFile = () => {
-    window.location.href = "src/assets/files/resume.pdf"
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -161,7 +157,7 @@ export default function ZamoffADRLanding() {
                 <AlignJustify className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-3">See full experience</h3>
                 <p className="text-gray-600">
-                  Download CV to view more of Mitch Zamoff's experience
+                  Download CV to view more of Mitch Zamoff&apos;s experience
                 </p>
               </CardContent>
             </Card>
