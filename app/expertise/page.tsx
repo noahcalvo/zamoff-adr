@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Navvy from "@/components/ui/navbar"
 import { Badge } from "@/components/ui/badge"
 import { Scale, Shield, Heart, Building, FileText, Users } from "lucide-react"
 
@@ -145,33 +146,9 @@ export default function Expertise() {
         </div>
       </section>
 
-      <nav className="bg-blue-900 text-white py-4 sticky top-0 z-30">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-8 text-sm font-medium">
-            <a href="/#experience" className="hover:text-blue-200 transition-colors">
-              Experience
-            </a>
-            <a href="/expertise" className="hover:text-blue-200 transition-colors">
-              Expertise
-            </a>
-            <a href="/#healthcare" className="hover:text-blue-200 transition-colors">
-              Healthcare
-            </a>
-            <a href="/education" className="hover:text-blue-200 transition-colors">
-              Education
-            </a>
-            <a href="/#publications" className="hover:text-blue-200 transition-colors">
-              Publications
-            </a>
-            <a href="/#contact" className="hover:text-blue-200 transition-colors">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
-
+      <Navvy />
       {/* Expertise Content */}
-      <section className="py-16 mt-4">
+      <section className="mt-4">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12">
             {expertiseContent.map(([title, subtitle, IconComponent, points], index) => {
@@ -206,30 +183,6 @@ export default function Expertise() {
             })}
           </div>
 
-          {/* Additional Expertise Areas */}
-          <div className="mt-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Additional Practice Areas</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                "Antitrust Matters",
-                "Pharmaceutical Law",
-                "Employment Issues",
-                "Securities Arbitration",
-                "International Commerce",
-                "Insurance Disputes",
-                "Technology Contracts",
-                "Real Estate Disputes",
-              ].map((area, index) => (
-                <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <Scale className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-gray-900">{area}</h3>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
           {/* Call to Action */}
           <div className="mt-16 bg-blue-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Expert ADR Services?</h2>
@@ -238,12 +191,16 @@ export default function Expertise() {
               to resolve your most complex disputes efficiently and effectively.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                Schedule Consultation
-              </button>
-              <button className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                Download CV
-              </button>
+              <a href="mailto:mitch@zamoffadr.com" target="_blank">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                  Schedule Consultation
+                </button>
+              </a>
+              <a href="resume.pdf" download>
+                <button className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                  Download CV
+                </button>
+              </a>
             </div>
           </div>
         </div>

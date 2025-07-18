@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Scale, Globe, Users, BookOpen, Award, Phone, Mail, FileText } from "lucide-react"
+import { Scale, Globe, Users, BookOpen, Award, Phone, Mail, FileText, AlignJustify } from "lucide-react"
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-
+import Navvy from "@/components/ui/navbar";
 
 export default function ZamoffADRLanding() {
+  const downloadFile = () => {
+    window.location.href = "src/assets/files/resume.pdf"
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -54,37 +58,14 @@ export default function ZamoffADRLanding() {
               <div className="text-sm">Published Expert</div>
             </div>
           </div>
-          <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg rounded-md">
+          <a href="mailto:mitch@zamoffadr.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg rounded-md">
               Schedule Consultation
           </a>
         </div>
       </section>
 
       {/* Navigation Strip */}
-      <nav className="bg-blue-900 text-white py-4 sticky top-0 z-30">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center gap-8 text-sm font-medium">
-            <a href="#experience" className="hover:text-blue-200 transition-colors">
-              Experience
-            </a>
-            <a href="/expertise" className="hover:text-blue-200 transition-colors">
-              Expertise
-            </a>
-            <a href="#healthcare" className="hover:text-blue-200 transition-colors">
-              Healthcare
-            </a>
-            <a href="/education" className="hover:text-blue-200 transition-colors">
-              Education
-            </a>
-            <a href="#publications" className="hover:text-blue-200 transition-colors">
-              Publications
-            </a>
-            <a href="#contact" className="hover:text-blue-200 transition-colors">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navvy/>
 
       {/* Experience Section */}
       <section id="experience" className="py-20 bg-gray-50">
@@ -174,6 +155,17 @@ export default function ZamoffADRLanding() {
                 </p>
               </CardContent>
             </Card>
+            <a href="resume.pdf" download>
+            <Card className="border-0 shadow-lg hover:scale-125 transition">
+              <CardContent className="p-8 text-center">
+                <AlignJustify className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">See full experience</h3>
+                <p className="text-gray-600">
+                  Download CV to view more of Mitch Zamoff's experience
+                </p>
+              </CardContent>
+            </Card>
+            </a>
           </div>
         </div>
       </section>
@@ -190,12 +182,12 @@ export default function ZamoffADRLanding() {
             {[
               "Consumer Protection",
               "Contract Disputes",
-              "Antitrust Matters",
-              "Pharmaceutical Law",
               "Healthcare Disputes",
               "Employment Issues",
-              "Securities Arbitration",
-              "International Commerce",
+              "Pharmaceutical Law",              
+              "Insurance Disputes",
+              "Antitrust & Competition",
+              "Complex Disputes"
             ].map((area, index) => {
               const slug = area.toLowerCase().replace(/\s+/g, '-'); // e.g. "Contract Disputes" → "contract-disputes"
               return (
@@ -329,6 +321,7 @@ export default function ZamoffADRLanding() {
                 Schedule Consultation
               </Button>
             </a>
+            <a href="resume.pdf" download>
             <Button
               size="lg"
               variant="outline"
@@ -336,6 +329,7 @@ export default function ZamoffADRLanding() {
             >
               Download CV
             </Button>
+            </a>
           </div>
         </div>
       </section>
