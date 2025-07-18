@@ -2,9 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Navvy from "@/components/ui/navbar"
 import { Badge } from "@/components/ui/badge"
 import { Scale, Shield, Heart, Building, FileText, Users } from "lucide-react"
+import type { ElementType } from "react";
 
 export default function Expertise() {
-  const expertiseContent: [string, string, any, string[]][] = [
+  const expertiseContent: [string, string, ElementType, string[]][] = [
     [
       "Consumer Protection",
       "CONSUMER LAW",

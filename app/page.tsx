@@ -272,15 +272,15 @@ export default function ZamoffADRLanding() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Publications & Speaking</h2>
               <div className="space-y-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold">"Modern Arbitration Practice"</h4>
+                  <h4 className="font-semibold">&quot;Modern Arbitration Practice&quot;</h4>
                   <p className="text-sm text-gray-600">American Bar Journal, 2024</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold">"Healthcare Dispute Resolution"</h4>
+                  <h4 className="font-semibold">&quot;Healthcare Dispute Resolution&quot;</h4>
                   <p className="text-sm text-gray-600">Health Law Review, 2023</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold">"Consumer Protection in ADR"</h4>
+                  <h4 className="font-semibold">&quot;Consumer Protection in ADR&quot;</h4>
                   <p className="text-sm text-gray-600">Consumer Law Quarterly, 2023</p>
                 </div>
               </div>
