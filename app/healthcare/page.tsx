@@ -88,6 +88,7 @@ export default function HealthcarePage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navvy />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -113,9 +114,6 @@ export default function HealthcarePage() {
           </div>
         </div>
       </section>
-
-      <Navvy />
-
       {/* Experience Breakdown */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
@@ -291,7 +289,7 @@ export default function HealthcarePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:mitch@zamoffadr.com" target="_blank">
               <button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
-                Schedule Healthcare Consultation
+              Schedule
               </button>
             </a>
             <a href="resume.pdf" download>

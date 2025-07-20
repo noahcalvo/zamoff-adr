@@ -1,43 +1,29 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Navvy from "@/components/ui/navbar"
-import { Badge } from "@/components/ui/badge"
 import { Scale, Shield, Heart, Building, FileText, Users } from "lucide-react"
 import type { ElementType } from "react";
+import Link from "next/link"
 
 export default function Expertise() {
-  const expertiseContent: [string, string, ElementType, string[]][] = [
-    [
-      "Consumer Protection",
-      "CONSUMER LAW",
-      Shield,
-      [
-        "Breach of contract disputes",
-        "False advertising claims",
-        "Unfair pricing practices",
-        "Antitrust violations",
-        "Privacy law violations",
-        "Fraud and misleading conduct",
-        "Lending and debt collection claims",
-        "Statutory and common law unfair competition claims",
-      ],
-    ],
+  const expertiseContent: [string, ElementType, string[]][] = [
     [
       "Contract Disputes",
-      "CONTRACT LAW",
       FileText,
       [
         "Payment disputes",
-        "Service agreements",
+        "Sales and service agreements",
         "Exclusivity deals",
         "Employment and non-compete agreements",
         "Shareholder agreements",
         "Vendor and supplier contracts",
         "Insurance contracts",
+        "Healthcare agreements",
+        "Non-disclosure agreements", "Partnership and joint venture agreements", "Franchise contracts",
+        "Loan agreements"
       ],
     ],
     [
-      "Healthcare Disputes",
-      "HEALTHCARE",
+      "Healthcare",
       Heart,
       [
         "Contract interpretation and federal/state health laws",
@@ -48,34 +34,11 @@ export default function Expertise() {
         "Coordination of benefits and fee schedule interpretation",
         "Allowed amounts, covered services, and eligible expenses",
         "Negotiated rates and clean claim issues",
-        "Coding, prior authorization, and experimental treatments",
         "Network terminations and 'usual and customary' rates",
         "HIPAA, FCA, ACA, and ERISA compliance",
-        "Out-of-network claims and 340B drug pricing program",
         "Software contracts and outsourcing agreements",
         "ASO contracts and partnership arrangements",
         "Claims sampling in payor-provider disputes",
-      ],
-    ],
-    [
-      "Employment Law",
-      "EMPLOYMENT LAW",
-      Users,
-      [
-        "Alleged employment discrimination cases",
-        "Alleged sexual harassment disputes",
-        "Alleged violations of employment agreements",
-        "Enforcement of non-competition provisions",
-        "Enforcement of non-solicitation provisions",
-        "Alleged violations of employment law statutes",
-        "Employment law regulatory compliance",
-      ],
-    ],
-    [
-      "Pharmaceutical Law",
-      "PHARMACEUTICAL/BIOTECHNOLOGY",
-      Building,
-      [
         "Antitrust and intellectual property disputes",
         "Contract disputes in pharma/biotech sector",
         "Federal and state law compliance issues",
@@ -84,11 +47,12 @@ export default function Expertise() {
         "Coding and reimbursement issues",
         "Healthcare provider-pharmaceutical company relationships",
         "Medical device company disputes",
+        "Out-of-network claims and 340B drug pricing program",
+        "Coding, prior authorization, and experimental treatments",
       ],
     ],
     [
-      "Insurance Disputes",
-      "INSURANCE",
+      "Insurance Law",
       Shield,
       [
         "Health insurance policy disputes",
@@ -103,7 +67,6 @@ export default function Expertise() {
     ],
     [
       "Antitrust & Competition",
-      "ANTITRUST AND COMPETITION",
       Scale,
       [
         "Alleged price fixing violations",
@@ -115,8 +78,21 @@ export default function Expertise() {
       ],
     ],
     [
-      "Complex Disputes",
-      "COMPLEX DISPUTES",
+      "Employment Law and Whistleblower Actions",
+      Users,
+      [
+        "Alleged employment discrimination cases",
+        "Alleged sexual harassment disputes",
+        "Alleged violations of employment agreements",
+        "Enforcement of non-competition provisions",
+        "Enforcement of non-solicitation provisions",
+        "Alleged violations of employment law statutes",
+        "Employment law regulatory compliance",
+        "Retaliation claims and whistleblower actions"
+      ],
+    ],
+    [
+      "Complex Business Disputes",
       Building,
       [
         "Multi-jurisdictional healthcare law matters",
@@ -129,6 +105,32 @@ export default function Expertise() {
         "Compliance issues and government investigations",
       ],
     ],
+    [
+      "Major Tort Claims",
+      Scale,
+      [
+        "Products liability",
+        "Pharmaceuticals", 
+        "Medical devices", 
+        "Environmental", 
+        "Toxic torts",
+        "Serious personal injury claims"
+      ]
+    ],
+    [
+      "Consumer Protection",
+      Shield,
+      [
+        "Breach of contract disputes",
+        "False advertising claims",
+        "Unfair pricing practices",
+        "Antitrust violations",
+        "Privacy law violations",
+        "Fraud and misleading conduct",
+        "Lending and debt collection claims",
+        "Statutory and common law unfair competition claims",
+      ],
+    ],
   ]
 
   // Slugify function to match the anchor links
@@ -136,6 +138,7 @@ export default function Expertise() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navvy />
       {/* Header Section */}
       <section className="bg-blue-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
@@ -146,13 +149,11 @@ export default function Expertise() {
           </p>
         </div>
       </section>
-
-      <Navvy />
       {/* Expertise Content */}
       <section className="mt-4">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12">
-            {expertiseContent.map(([title, subtitle, IconComponent, points], index) => {
+            {expertiseContent.map(([title, IconComponent, points], index) => {
               const id = slugify(title)
               return (
                 <Card key={index} id={id} className="border-0 shadow-xl overflow-hidden">
@@ -162,21 +163,33 @@ export default function Expertise() {
                         <IconComponent className="w-8 h-8 text-blue-600" />
                       </div>
                       <div>
-                        <CardTitle className="text-2xl text-gray-900">{title}</CardTitle>
-                        <Badge variant="outline" className="mt-2 border-blue-200 text-blue-800">
-                          {subtitle}
-                        </Badge>
+                        <CardTitle className="text-2xl text-gray-900">{title}
+                        </CardTitle>
+                        {title == "Healthcare" && 
+                          <Link href="/healthcare" className="text-blue-600 transition-colors hover:text-blue-200">
+                            View Healthcare page
+                          </Link>}
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-8">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {points.map((point, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-gray-700 leading-relaxed">{point}</p>
-                        </div>
-                      ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-600">
+                      <ul className="list-none space-y-3">
+                        {points.slice(0, Math.ceil(points.length / 2)).map((point, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <span className="leading-relaxed">{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="list-none space-y-3">
+                        {points.slice(Math.ceil(points.length / 2)).map((point, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <span className="leading-relaxed">{point}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -194,7 +207,7 @@ export default function Expertise() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="mailto:mitch@zamoffadr.com" target="_blank">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                  Schedule Consultation
+                  Schedule
                 </button>
               </a>
               <a href="resume.pdf" download>

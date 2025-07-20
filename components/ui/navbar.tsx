@@ -1,10 +1,44 @@
-import Link from "next/link";
+'use client'
+
+import { useState } from "react"
+import Link from "next/link"
+import { Menu, X } from "lucide-react"
 
 export default function Navvy() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-  <nav className="bg-blue-900 text-white py-4 sticky top-0 z-30">
-  <div className="max-w-6xl mx-auto px-6">
-    <div className="flex flex-wrap justify-center gap-8 text-sm font-medium">
+    <nav className="bg-blue-900 text-white py-4 sticky top-0 z-30">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <img src="/logo_2.png" alt="Zamoff ADR" className="w-32 h-16 object-cover object-center" />
+
+        {/* Hamburger toggle button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Links for medium and up */}
+        <div className="hidden md:flex gap-x-8 text-sm font-medium items-center">
+          <NavLinks />
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="md:hidden px-6 pt-4 flex flex-col gap-y-4 text-sm font-medium">
+          <NavLinks />
+        </div>
+      )}
+    </nav>
+  )
+}
+
+function NavLinks() {
+  return (
+    <>
       <Link href="/#experience" className="hover:text-blue-200 transition-colors">
         Experience
       </Link>
@@ -15,12 +49,14 @@ export default function Navvy() {
         Healthcare
       </Link>
       <Link href="/#education" className="hover:text-blue-200 transition-colors">
-        Education & Publications
+        Education & Awards
+      </Link>
+      <Link href="/#publications" className="hover:text-blue-200 transition-colors">
+        Publications & Speaking
       </Link>
       <Link href="/#contact" className="hover:text-blue-200 transition-colors">
         Contact
       </Link>
-    </div>
-  </div>
-</nav>)
+    </>
+  )
 }
