@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Scale, Globe, Users, BookOpen, Award, Phone, Mail, FileText, AlignJustify } from "lucide-react"
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Scale, Globe, Users, BookOpen, Award, Mail, FileText, AlignJustify } from "lucide-react"
 import Link from 'next/link';
 import Navvy from "@/components/ui/navbar";
 import Footy from "@/components/ui/footer";
