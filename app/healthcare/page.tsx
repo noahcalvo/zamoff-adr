@@ -1,21 +1,15 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Navvy from "@/components/ui/navbar"
+import Footy from "@/components/ui/footer"
 import { Building2, Users, FileText, Scale, Shield, Pill, Hospital, DollarSign, Gavel, Network } from "lucide-react"
 
 export default function HealthcarePage() {
-  const experienceBreakdown = [
-    { category: "Managed Care/Commercial Payors", percentage: 35, color: "bg-blue-600" },
-    { category: "Other Healthcare", percentage: 35, color: "bg-blue-500" },
-    { category: "Other Non-Healthcare", percentage: 20, color: "bg-blue-400" },
-    { category: "Hospitals", percentage: 15, color: "bg-blue-300" },
-  ]
-
   const specificMatters = [
     {
-      title: "Payor-Provider Payment Disputes",
+      title: "Payor-Provider Disputes",
       icon: DollarSign,
-      description: "Including claims sampling methodologies",
+      description: "Claims sampling",
     },
     { title: "Contract Disputes", icon: FileText, description: "Healthcare entity contract interpretation" },
     { title: "Regulatory Compliance", icon: Shield, description: "State and federal healthcare laws and regulations" },
@@ -40,6 +34,8 @@ export default function HealthcarePage() {
     { title: "Sales & Marketing Practices", icon: Users, description: "Pharmaceutical and medical device marketing" },
     { title: "Unlawful Inducements", icon: Shield, description: "Referral and inducement allegations" },
     { title: "Antitrust/IP Disputes", icon: Scale, description: "Healthcare antitrust and intellectual property" },
+    { title: "Privacy Issues", icon: Shield, description: "HIPAA, HITECH and state laws" },
+    { title: "340B Program Disputes", icon: Pill, description: "Drug pricing issues"}
   ]
 
   const disputantTypes = [
@@ -90,18 +86,22 @@ export default function HealthcarePage() {
     <div className="min-h-screen bg-white">
       <Navvy />
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid md:grid-cols-3 gap-12 items-center">
+            <div className="col-span-2">
               <h1 className="text-5xl font-bold mb-6">Healthcare Law Expertise</h1>
               <p className="text-xl text-blue-100 mb-8">
                 Substantial experience arbitrating, mediating, and litigating disputes involving healthcare entities and
                 health law across all sectors of the industry.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-wrap">
                 <Badge className="bg-blue-600 text-white px-4 py-2">AAA Healthcare Panel</Badge>
-                <Badge className="bg-blue-600 text-white px-4 py-2">Health Law Association</Badge>
+                <Badge className="bg-blue-600 text-white px-4 py-2">AAA Healthcare Panel (Featured Panelist)</Badge>
+                <Badge className="bg-blue-600 text-white px-4 py-2">AHLA Panel (Neutral of the Month)</Badge>
+                <Badge className="bg-blue-600 text-white px-4 py-2">Former UnitedHealth Group General Counsel</Badge>
+                <Badge className="bg-blue-600 text-white px-4 py-2">Former Hogan Lovells Healthcare Litigator</Badge>
+                <Badge className="bg-blue-600 text-white px-4 py-2">Original Member of AAA Healthcare Advisory Council</Badge>
               </div>
             </div>
             <div>
@@ -110,38 +110,6 @@ export default function HealthcarePage() {
                 alt="Healthcare professionals in meeting"
                 className="rounded-lg shadow-xl"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Experience Breakdown */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Practice Time Allocation</h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <div className="space-y-6">
-                {experienceBreakdown.map((item, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-gray-700">{item.category}</span>
-                      <span className="font-bold text-blue-600">{item.percentage}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div
-                        className={`${item.color} h-3 rounded-full transition-all duration-500`}
-                        style={{ width: `${item.percentage}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Healthcare Focus</h3>
-              <p className="text-gray-700 leading-relaxed">
-                With <strong>70% of practice time</strong> devoted to healthcare-related matters—including managed care, hospitals, and other healthcare entities—the firm demonstrates deep specialization in this complex regulatory environment.
-              </p>
             </div>
           </div>
         </div>
@@ -174,7 +142,7 @@ export default function HealthcarePage() {
       {/* Disputant Types */}
       <section className="py-16 bg-blue-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Healthcare Entities Represented</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Representative Healthcare Clients</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             {disputantTypes.map((type, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-sm text-center">
@@ -204,80 +172,6 @@ export default function HealthcarePage() {
         </div>
       </section>
 
-      {/* Contract Types */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Healthcare Contract Disputes</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <FileText className="w-6 h-6 text-blue-600" />
-                  Contract Categories
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Health Plan - PBM Contracts</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Health Plan - TPA Contracts</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Healthcare Entity Employment Contracts</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Healthcare Joint Venture Agreements</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Provider - Vendor Contracts</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Scale className="w-6 h-6 text-blue-600" />
-                  Specialized Areas
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Medicare/Medicaid State Contracts</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>PBM - Pharmacy Network Agreements</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Healthcare Antitrust Claims</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Competition Law Disputes</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Consumer Protection Claims</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -288,18 +182,19 @@ export default function HealthcarePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:mitch@zamoffadr.com" target="_blank">
-              <button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
+              <button className="bg-white text-blue-900 hover:bg-blue-200 hover:cursor-pointer px-8 py-3 rounded-lg font-medium transition-colors">
               Schedule
               </button>
             </a>
             <a href="resume.pdf" download>
-              <button className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors">
+              <button className="border border-white text-white hover:bg-white hover:cursor-pointer hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors">
                 Download CV
               </button>
             </a>
           </div>
         </div>
       </section>
+      <Footy />
     </div>
   )
 }

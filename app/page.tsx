@@ -6,6 +6,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import Navvy from "@/components/ui/navbar";
+import Footy from "@/components/ui/footer";
 
 export default function ZamoffADRLanding() {
   return (
@@ -55,7 +56,7 @@ export default function ZamoffADRLanding() {
               <div className="text-sm">Board Member</div>
               <div className="text-sm">Advisory Councilmember</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 col-span-full justify-self-center w-full max-w-[calc(100%/2-1rem)]">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 col-span-full justify-self-center w-full max-w-[calc(100%/2-1rem)] lg:max-w-[calc(100%/4-1rem)]">
               <div className="text-3xl font-bold text-blue-200">Author</div>
               <div className="text-sm">Published Expert</div>
             </div>
@@ -70,7 +71,7 @@ export default function ZamoffADRLanding() {
       <Navvy />
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-gray-50">
+      <section id="experience" className="py-20 bg-gray-50 scroll-m-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience That Matters</h2>
@@ -190,7 +191,7 @@ export default function ZamoffADRLanding() {
             <p className="text-xl text-gray-600">Substantial ADR Experience Across Diverse Practice Areas</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="flex gap-6 w-full flex-wrap justify-center">
             {[
               "Contract Disputes",
               "Healthcare",
@@ -318,7 +319,7 @@ export default function ZamoffADRLanding() {
             <p className="text-xl text-gray-300">Contact Mitch Zamoff for expert arbitration and mediation services</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 text-center">
+          <div className="flex text-center justify-center gap-x-8">
             <div>
               <Mail className="w-8 h-8 mx-auto mb-4 text-blue-400" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
@@ -351,14 +352,7 @@ export default function ZamoffADRLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-gray-400 py-8">
-        <div className="max-w-6xl mx-auto px-6 flex justify-center space-x-3 items-center">
-          <p>&copy; 2025 Mitch Zamoff ADR</p>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors">
-            <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6" />
-          </a>
-        </div>
-      </footer>
+      <Footy />
     </div>
   )
 }

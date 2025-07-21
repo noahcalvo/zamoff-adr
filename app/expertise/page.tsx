@@ -3,6 +3,7 @@ import Navvy from "@/components/ui/navbar"
 import { Scale, Shield, Heart, Building, FileText, Users } from "lucide-react"
 import type { ElementType } from "react";
 import Link from "next/link"
+import Footy from "@/components/ui/footer";
 
 export default function Expertise() {
   const expertiseContent: [string, ElementType, string[]][] = [
@@ -140,7 +141,7 @@ export default function Expertise() {
     <div className="min-h-screen bg-white">
       <Navvy />
       {/* Header Section */}
-      <section className="bg-blue-900 text-white py-16">
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-5xl font-bold mb-6">Areas of Expertise</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
@@ -156,6 +157,7 @@ export default function Expertise() {
             {expertiseContent.map(([title, IconComponent, points], index) => {
               const id = slugify(title)
               return (
+                <section id={id} key={index} className="scroll-m-24">
                 <Card key={index} id={id} className="border-0 shadow-xl overflow-hidden">
                   <CardHeader className="bg-gray-100 border-b pt-6">
                     <div className="flex items-center gap-4">
@@ -193,6 +195,7 @@ export default function Expertise() {
                     </div>
                   </CardContent>
                 </Card>
+                </section>
               )
             })}
           </div>
@@ -219,6 +222,7 @@ export default function Expertise() {
           </div>
         </div>
       </section>
+      <Footy />
     </div>
   )
 }
