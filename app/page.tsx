@@ -182,9 +182,9 @@ export default function ZamoffADRLanding() {
       {/* Expertise Section */}
       <section id="expertise" className="py-10  sm:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <Link href="/expertise">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4 underline hover:text-blue-600">Areas of Expertise</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 underline hover:text-blue-600 hover:cursor-pointer">Areas of Expertise</h2>
             </Link>
             <p className="text-xl text-gray-600">Substantial ADR Experience Across Diverse Practice Areas</p>
           </div>

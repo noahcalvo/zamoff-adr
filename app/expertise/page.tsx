@@ -204,7 +204,7 @@ export default function Expertise() {
           <div className="mt-16 bg-blue-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Expert ADR Services?</h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              With extensive experience across these practice areas, ZamoffADR provides the specialized expertise needed
+              With extensive experience across these practice areas, Zamoff ADR provides the specialized expertise needed
               to resolve your most complex disputes efficiently and effectively.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

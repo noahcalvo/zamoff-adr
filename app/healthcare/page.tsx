@@ -177,7 +177,7 @@ export default function HealthcarePage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">Healthcare Dispute Resolution Expertise</h2>
           <p className="text-xl text-blue-100 mb-8">
-            With decades of experience in healthcare law and deep understanding of industry complexities, ZamoffADR
+            With decades of experience in healthcare law and deep understanding of industry complexities, Zamoff ADR
             provides specialized expertise for your most challenging healthcare disputes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
