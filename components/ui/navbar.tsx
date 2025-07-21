@@ -11,7 +11,7 @@ export default function Navvy() {
     <nav className="bg-blue-900 text-white py-4 sticky top-0 z-30">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
       <Link href="/#experience" className="hover:text-blue-200 transition-colors">
-        <img src="/logo_2.png" alt="Zamoff ADR" className="w-32 h-16 object-cover object-center" />
+        <img src="/logo_3.png" alt="Zamoff ADR" className="h-8 object-cover object-center my-2" />
       </Link>
         {/* Hamburger toggle button */}
         <button
