@@ -18,14 +18,13 @@ export default function ZamoffADRLanding() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-6xl mx-auto px-6 text-center text-white">
-          <div className="mb-8 mt-4">
+          <div className="w-48 h-48 overflow-hidden rounded-full mx-auto mb-6 border-4 border-white/20 mt-16">
             <img
-              src="/zamoff-headshot.png"
+              src="/zamoff-headshot-full.jpeg"
               alt="Mitch Zamoff"
-              className="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-white/20 object-cover"
+              className="w-full -mt-4 object-cover"
             />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          </div>          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Deep ADR Expertise.
             <br />
             <span className="text-blue-200">Proven Results.</span>
@@ -69,7 +68,7 @@ export default function ZamoffADRLanding() {
       <Navvy />
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-gray-50 scroll-m-24">
+      <section id="experience" className="py-20 bg-gray-50 scroll-m-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience That Matters</h2>
@@ -165,9 +164,9 @@ export default function ZamoffADRLanding() {
             </Card>
 
             <a href="resume.pdf" download>
-              <Card className="border-0 shadow-lg hover:scale-110 transition">
+              <Card className="border-0 shadow-lg hover:scale-110 transition bg-[#e7eef3]">
                 <CardContent className="p-8 text-center">
-                  <AlignJustify className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <img src="/logo.png" className="w-full h-full text-blue-600 mx-auto mb-4"/>
                   <h3 className="text-xl font-bold mb-3">See full experience</h3>
                   <p className="text-gray-600">
                     Download CV to view more of Mitch Zamoff&apos;s experience
@@ -181,38 +180,47 @@ export default function ZamoffADRLanding() {
 
       {/* Expertise Section */}
       <section id="expertise" className="py-10  sm:py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-8">
-            <Link href="/expertise">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4 underline hover:text-blue-600 hover:cursor-pointer">Areas of Expertise</h2>
-            </Link>
-            <p className="text-xl text-gray-600">Substantial ADR Experience Across Diverse Practice Areas</p>
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2">
+            <div className="text-center mb-8">
+              <Link href="/expertise">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4 underline hover:text-blue-600 hover:cursor-pointer">Areas of Expertise</h2>
+              </Link>
+              <p className="text-xl text-gray-600">Substantial ADR Experience Across Diverse Practice Areas</p>
+            </div>
+            <div className="flex gap-6 w-full flex-wrap justify-center">
+              {[
+                "Contract Disputes",
+                "Healthcare",
+                "Insurance Law",
+                "Antitrust & Competition",
+                "Employment Law and Whistleblower Actions",
+                "Complex Business Disputes",
+                "Major Tort Actions",
+                "Consumer Protection",
+              ].map((area, index) => {
+                const slug = area.toLowerCase().replace(/\s+/g, '-'); // e.g. "Contract Disputes" → "contract-disputes"
+                return (
+                  <Link key={index} href={`/expertise#${slug}`} className="text-center">
+                    <Badge
+                      key={index}
+                      variant="outline"
+                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50"
+                    >
+                      {area}
+                    </Badge>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-
-          <div className="flex gap-6 w-full flex-wrap justify-center">
-            {[
-              "Contract Disputes",
-              "Healthcare",
-              "Insurance Law",
-              "Antitrust & Competition",
-              "Employment Law and Whistleblower Actions",
-              "Complex Business Disputes",
-              "Major Tort Actions",
-              "Consumer Protection",
-            ].map((area, index) => {
-              const slug = area.toLowerCase().replace(/\s+/g, '-'); // e.g. "Contract Disputes" → "contract-disputes"
-              return (
-                <Link key={index} href={`/expertise#${slug}`} className="text-center">
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50"
-                  >
-                    {area}
-                  </Badge>
-                </Link>
-              );
-            })}
+          <div>            
+            <div className="max-h-80 max-w-120 overflow-hidden rounded-lg shadow-lg mx-auto">
+            <img
+              src="/speaking-at-podium.jpeg"
+              alt="Healthcare professionals in meeting"
+              className="w-full"
+            /></div>
           </div>
         </div>
       </section>

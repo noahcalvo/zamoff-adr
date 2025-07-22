@@ -40,7 +40,7 @@ export default function Navvy() {
 function NavLinks() {
   return (
     <>
-      <Link href="/#experience" className="hover:text-blue-200 transition-colors">
+      <Link href="/experience" className="hover:text-blue-200 transition-colors">
         Experience
       </Link>
       <Link href="/expertise" className="hover:text-blue-200 transition-colors">
