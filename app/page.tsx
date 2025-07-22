@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Scale, Globe, Users, BookOpen, Award, Mail, FileText, AlignJustify } from "lucide-react"
+import { Scale, Globe, Users, BookOpen, Award, Mail, FileText } from "lucide-react"
 import Link from 'next/link';
 import Navvy from "@/components/ui/navbar";
 import Footy from "@/components/ui/footer";
@@ -239,15 +239,15 @@ export default function ZamoffADRLanding() {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
-                  <Award className="w-5 h-5 text-blue-600 mr-3" />
+                  <Award className="w-5 h-5 text-amber-500 mr-3" />
                   Member of AAA Healthcare and AHLA Panels
                 </li>
                 <li className="flex items-center">
-                  <Award className="w-5 h-5 text-blue-600 mr-3" />
+                  <Award className="w-5 h-5 text-amber-500 mr-3" />
                   Former GC of Leading Health Benefits and Services Company
                 </li>
                 <li className="flex items-center">
-                  <Award className="w-5 h-5 text-blue-600 mr-3" />
+                  <Award className="w-5 h-5 text-amber-500 mr-3" />
                   Original Member of AAA Healthcare Advisory Council
                 </li>
               </ul>

@@ -176,7 +176,8 @@ export default function Expertise() {
             ].map(([name, id]) => {
               const slug = name.toLowerCase().replace(/\s+/g, '-'); // e.g. "Contract Disputes" → "contract-disputes"
               return (
-                <Link href={`/expertise#${slug}`} className="px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full hover:bg-blue-200 transition">
+                <Link href={`/expertise#${slug}`} className="px-4 py-2 bg-blue-100 text-blue-800 font-medium rounded-full hover:bg-blue-200 transition"
+                key={id}>
                   {name}
                 </Link>
               )
@@ -253,7 +254,7 @@ export default function Expertise() {
         <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-none">
           <CardContent className="p-8 text-center">
             <div className="flex justify-center mb-4">
-              <Award className="w-8 h-8 text-blue-600" />
+              <Award className="w-8 h-8 text-amber-500" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Professional Recognition</h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
