@@ -160,16 +160,16 @@ export default function ZamoffADRLanding() {
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="py-10  sm:py-20">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2">
+      <section id="expertise" className="py-10 sm:py-20 overflow-x-hidden">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 px-6 w-full">
             <div className="text-center mb-8">
               <Link href="/expertise">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4 underline hover:text-blue-600 hover:cursor-pointer">Areas of Expertise</h2>
               </Link>
               <p className="text-xl text-gray-600">Substantial ADR Experience Across Diverse Practice Areas</p>
             </div>
-            <div className="flex gap-6 w-full flex-wrap justify-center">
+            <div className="flex gap-6 flex-wrap justify-center">
               {[
                 "Contract Disputes",
                 "Healthcare",
@@ -186,7 +186,7 @@ export default function ZamoffADRLanding() {
                     <Badge
                       key={index}
                       variant="outline"
-                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50 text-lg"
+                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50 md:text-lg"
                     >
                       {area}
                     </Badge>
@@ -196,11 +196,11 @@ export default function ZamoffADRLanding() {
             </div>
           </div>
           <div>
-            <div className="max-w-120 overflow-hidden rounded-lg shadow-lg mx-auto">
+            <div className="max-w-60 sm:max-w-full overflow-hidden rounded-lg shadow-lg mx-auto w-full">
               <img
                 src="/speaking-at-pod.jpeg"
                 alt="Healthcare professionals in meeting"
-                className="w-full"
+                className="w-full max-w-full h-auto"
               /></div>
           </div>
         </div>
@@ -250,9 +250,9 @@ export default function ZamoffADRLanding() {
           <div className="grid md:grid-cols-2 gap-16">
             {/* Education */}
             <div id="education">
-              <a href="/education">
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Education & Training</h2>
-              </a>
+              <Link href="/education" >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 underline hover:text-blue-600">Education & Training</h2>
+              </Link>
               <div className="space-y-4">
                 <div className="py-3">
                   <div className="border-l-4 border-blue-600 pl-6">
@@ -278,7 +278,9 @@ export default function ZamoffADRLanding() {
 
             {/* Publications */}
             <div id="publications">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Publications & Speaking</h2>
+              <Link href="/publications" >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 underline hover:text-blue-600">Publications & Speaking</h2>
+              </Link>
               <div className="space-y-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="font-semibold">&quot;Modern Arbitration Practice&quot;</h4>

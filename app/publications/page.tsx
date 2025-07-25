@@ -182,29 +182,35 @@ export default function HealthcarePage() {
     <div className="min-h-screen bg-white w-full">
       <Navvy />
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10 sm:hidden"></div>
+      <img
+          src="/speaking-in-class-crop.png?height=1080&width=1920"
+          alt="Professional legal setting"
+          className="absolute inset-0 w-full h-full object-cover sm:hidden"
+        />
+                <div className="relative z-20 max-w-6xl mx-auto px-6 text-center text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex gap-8 items-center">
-            <div>
-              <img
+            <img
                 src="/speaking-in-class-crop.png"
                 alt="Mitch Zamoff speaking at a University of Minnesota Law Ceremony"
-                className="rounded-lg shadow-xl max-w-80"
+                className="rounded-lg shadow-xl max-w-80 hidden sm:block"
               />
-            </div>
-            <div>
-              <h1 className="text-5xl font-bold mb-6">Speaking Engagements and Publications</h1>
+              <div className="text-left">
+              <h1 className="text-3xl md:text-5xl font-bold mb-6 mt-24">Speaking Engagements and Publications</h1>
               <p className="text-md text-blue-100 mb-8">
                 Substantial experience arbitrating, mediating, and litigating disputes involving healthcare entities and
                 health law across all sectors of the industry.
               </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section id="speaking" className="py-20 bg-gray-50 scroll-m-16">
-        <div className="max-w-6xl mx-auto px-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-16">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Speaking</h2>
           </div>
@@ -212,8 +218,8 @@ export default function HealthcarePage() {
           <div className="mb-8">
           {speaking.map(( speach, index) =>               
           (
-            <li className="text-lg font-semibold mb-2 list-none" key={index}>
-              <div className="flex gap-4"><speach.icon className="w-6 h-6 text-blue-600" />
+            <li className="text-lg font-semibold mb-6 list-none" key={index}>
+              <div className="flex gap-4"><speach.icon className="w-6 h-6 text-blue-600 hidden sm:block" />
               {speach.talk}</div><div className="pl-16 text-gray-500 font-regular text-md">{speach.role}{speach.date && ","} {speach.date}</div></li>
           ))}
           </div>

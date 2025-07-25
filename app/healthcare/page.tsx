@@ -88,35 +88,36 @@ export default function HealthcarePage() {
     "AHLA Panel (Neutral of the Month)",
     "Former UnitedHealth Group General Counsel",
     "Former Hogan Lovells Healthcare Litigator",
-    "Original Member of AAA Healthcare Advisory Council"
+    `Original Member
+    of AAA Healthcare Advisory Council`
   ]
 
   return (
     <div className="min-h-screen bg-white">
       <Navvy />
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20 w-full overflow-x-hidden">
+        <div className="max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">Healthcare Law Expertise</h1>
-              <p className="text-md text-blue-100 mb-8">
+              <h1 className="text-5xl font-bold mb-6 px-4">Healthcare Law Expertise</h1>
+              <p className="text-md text-blue-100 mb-8 px-4">
                 Substantial experience arbitrating, mediating, and litigating disputes involving healthcare entities and
                 health law across all sectors of the industry.
               </p>
-              <div className="">
+              <div className="px-4 max-w-full">
                 {bigPicture.map((item, index) => (
                   <li className="list-none my-2" key={index}>
-                    <Badge className="bg-blue-600 text-white px-4 py-2 text-md">{item}</Badge>
+                    <Badge className="bg-blue-600 text-white px-4 py-2 text-md whitespace-pre md:whitespace-normal">{item}</Badge>
                   </li>
                 ))}
               </div>
             </div>
-            <div>
+            <div className="max-w-60 sm:max-w-full overflow-hidden rounded-lg shadow-lg mx-auto w-full">
               <img
                 src="/doctor-signing.jpg"
                 alt="Doctor signing a paper"
-                className="rounded-lg shadow-xl"
+                className="w-full max-w-full h-auto"
               />
             </div>
           </div>

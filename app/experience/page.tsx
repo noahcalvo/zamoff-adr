@@ -180,8 +180,8 @@ export default function Expertise() {
       <section>
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Areas of Expertise</h2>
-          <div className="grid grid-cols-3 gap-2 items-center justify-items-center">
-            <img className="rounded-md shadow-lg self-center max-h-64" src="/speaking-in-class.jpg" alt="Mitch speaking in class at the University of Minnesota"/>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-center justify-items-center">
+            <img className="rounded-md shadow-lg self-center sm:max-h-64 w-full mb-4 sm:mb-0 h-auto sm:w-auto" src="/speaking-in-class.jpg" alt="Mitch speaking in class at the University of Minnesota"/>
             <div className="flex flex-wrap gap-4 mb-12 col-span-2">
               {[
                 ['Contract Disputes', 'contract-disputes'],
@@ -218,7 +218,7 @@ export default function Expertise() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {healthcareDisputes.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 sm:py-6">
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 sm:py-6 py-2">
                 <CardHeader className="pb-3">
                   <div className={`w-12 h-12 rounded-lg ${item.color} flex items-center justify-center mb-3`}>
                     <item.icon className="w-6 h-6" />
@@ -256,7 +256,7 @@ export default function Expertise() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {adrExperience.map((item, index) => (
-              <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300 sm:py-6">
+              <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300 sm:py-6 py-2">
                 <CardHeader className="pb-3">
                   <div className={`w-12 h-12 rounded-lg ${item.color} flex items-center justify-center mb-3`}>
                     <item.icon className="w-6 h-6" />

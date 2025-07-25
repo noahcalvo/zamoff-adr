@@ -16,16 +16,16 @@ export default function HealthcarePage() {
     <div className="min-h-screen bg-white w-full">
       <Navvy />
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10"></div>
+      <img
+          src="/speaking-at-pod.jpeg?height=1080&width=1920"
+          alt="Professional legal setting"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+                <div className="relative z-20 max-w-6xl mx-auto px-6 text-center text-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex gap-8 items-center">
-            <div>
-              <img
-                src="/speaking-at-pod.jpeg"
-                alt="Mitch Zamoff speaking at a University of Minnesota Law Ceremony"
-                className="rounded-lg shadow-xl max-w-80"
-              />
-            </div>
             <div>
               <h1 className="text-5xl font-bold mb-6">Education & Awards</h1>
               <p className="text-md text-blue-100 mb-8">
@@ -34,6 +34,7 @@ export default function HealthcarePage() {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -48,7 +49,7 @@ export default function HealthcarePage() {
             <Card className="shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
+                  <div className="bg-blue-100 p-3 rounded-lg hidden sm:block">
                     <GraduationCap className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
@@ -73,7 +74,7 @@ export default function HealthcarePage() {
             <Card className="shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-orange-100 p-3 rounded-lg">
+                  <div className="bg-orange-100 p-3 rounded-lg hidden sm:block">
                     <GraduationCap className="w-6 h-6 text-orange-600" />
                   </div>
                   <div className="flex-1">
@@ -111,7 +112,7 @@ export default function HealthcarePage() {
             <Card className="shadow-lg border-l-4 border-l-blue-600">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Trophy className="w-6 h-6 text-yellow-500 mt-1" />
+                  <Trophy className="w-6 h-6 text-yellow-500 mt-1 hidden md:block" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">
                       University of Minnesota Award for Outstanding Contributions to Graduate and Professional Education
@@ -125,7 +126,7 @@ export default function HealthcarePage() {
             <Card className="shadow-lg border-l-4 border-l-blue-600">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Star className="w-6 h-6 text-yellow-500 mt-1" />
+                  <Star className="w-6 h-6 text-yellow-500 mt-1 hidden md:block" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">
                       Inductee, Academy of Distinguished Teachers (2025)
@@ -138,7 +139,7 @@ export default function HealthcarePage() {
             <Card className="shadow-lg border-l-4 border-l-green-600">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Award className="w-6 h-6 text-green-500 mt-1" />
+                  <Award className="w-6 h-6 text-green-500 mt-1 hidden md:block" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">
                       Best ADR Scholarly Article of the Year, Association of American Law Schools, ADR Section (2023)
@@ -154,7 +155,7 @@ export default function HealthcarePage() {
             <Card className="shadow-lg border-l-4 border-l-orange-600">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Trophy className="w-6 h-6 text-orange-500 mt-1" />
+                  <Trophy className="w-6 h-6 text-orange-500 mt-1 hidden md:block" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">
                       Stanley V. Kinyon Teacher of the Year Award, University of Minnesota Law School (2016 & 2021)
