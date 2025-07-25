@@ -6,6 +6,63 @@ import Link from 'next/link';
 import Navvy from "@/components/ui/navbar";
 import Footy from "@/components/ui/footer";
 
+const experienceCards = [
+  {
+    icon: Scale,
+    title: "200+ Cases",
+    description:
+      "Arbitrated and mediated over 200 cases across diverse practice areas and industries.",
+  },
+  {
+    icon: Globe,
+    title: "AAA Leadership",
+    description:
+      "Former member of AAA Board of Directors, Advisory Council and Healthcare Advisory Panel.",
+  },
+  {
+    icon: Award,
+    title: "AAA Panel Member",
+    description:
+      "Member of American Arbitration Association national, healthcare (featured panelist) and consumer arbitration panels.",
+  },
+  {
+    icon: Users,
+    title: "Health Law Panel",
+    description:
+      "Member of American Health Law Association arbitration and mediation panel.",
+  },
+  {
+    icon: BookOpen,
+    title: "ADR Professor",
+    description:
+      "Chaired ADR professor and assistant dean at top-20 US law school.",
+  },
+  {
+    icon: FileText,
+    title: "Author & Speaker",
+    description:
+      "Frequent presenter and author on issues relating to arbitration law and practice.",
+  },
+  {
+    icon: Users,
+    title: "Healthcare Trainer",
+    description:
+      "AAA healthcare trainer for former judges, sharing expertise in specialized dispute resolution.",
+  },
+  {
+    icon: Scale,
+    title: "Fortune 10 Experience",
+    description:
+      "Prior experience as General Counsel of Fortune 10 company and ADR practitioner at major law firm.",
+  },
+  {
+    icon: Users,
+    title: "Law Firm Partner",
+    description:
+      "Former dispute resolution partner at leading international law firm.",
+  },
+]
+
 export default function ZamoffADRLanding() {
   return (
     <div className="min-h-screen bg-white">
@@ -18,7 +75,7 @@ export default function ZamoffADRLanding() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-6xl mx-auto px-6 text-center text-white">
-          <div className="w-48 h-48 overflow-hidden rounded-full mx-auto mb-6 border-4 border-white/20 mt-16">
+          <div className="w-48 h-48 overflow-hidden rounded-full mx-auto mb-6 border-4 border-white/20 mt-8">
             <img
               src="/zamoff-headshot-full.jpeg"
               alt="Mitch Zamoff"
@@ -58,7 +115,7 @@ export default function ZamoffADRLanding() {
               <div className="text-sm">Published Expert</div>
             </div>
           </div>
-          <a href="mailto:mitch@zamoffadr.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg rounded-md mb-4">
+          <a href="mailto:mitch@zamoffadr.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg rounded-md mb-4">
             Schedule
           </a>
         </div>
@@ -78,98 +135,22 @@ export default function ZamoffADRLanding() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Scale className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">200+ Cases</h3>
-                <p className="text-gray-600">
-                  Arbitrated and mediated over 200 cases across diverse practice areas and industries.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Globe className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">AAA Leadership</h3>
-                <p className="text-gray-600">
-                  Former member of AAA Board of Directors, Advisory Council and Healthcare Advisory Panel.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Award className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">AAA Panel Member</h3>
-                <p className="text-gray-600">
-                  Member of American Arbitration Association national, healthcare (featured panelist) and consumer arbitration panels.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Health Law Panel</h3>
-                <p className="text-gray-600">
-                  Member of American Health Law Association arbitration and mediation panel.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <BookOpen className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">ADR Professor</h3>
-                <p className="text-gray-600">Chaired ADR professor and assistant dean at top-20 US law school.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <FileText className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Author & Speaker</h3>
-                <p className="text-gray-600">
-                  Frequent presenter and author on issues relating to arbitration law and practice.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Healthcare Trainer</h3>
-                <p className="text-gray-600">
-                  AAA healthcare trainer for former judges, sharing expertise in specialized dispute resolution.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Scale className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Fortune 10 Experience</h3>
-                <p className="text-gray-600">
-                  Prior experience as General Counsel of Fortune 10 company and ADR practitioner at major law firm.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Law Firm Partner </h3>
-                <p className="text-gray-600">Former dispute resolution partner at leading international law firm.</p>
-              </CardContent>
-            </Card>
-
-            <a href="resume.pdf" download>
-              <Card className="border-0 shadow-lg hover:scale-110 transition bg-[#e7eef3]">
+            {experienceCards.map(({ icon: Icon, title, description }, i) => (
+              <Card key={i} className="border-0 shadow-lg sm:py-6">
                 <CardContent className="p-8 text-center">
-                  <img src="/logo.png" className="w-full h-full text-blue-600 mx-auto mb-4"/>
-                  <h3 className="text-xl font-bold mb-3">See full experience</h3>
+                  <Icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-3">{title}</h3>
+                  <p className="text-gray-600">{description}</p>
+                </CardContent>
+              </Card>
+            ))}
+            <a href="resume.pdf" download>
+              <Card className="border-0 shadow-lg sm:py-6">
+                <CardContent className="p-8 text-center">
+                  <img src="/ZamoffADR-transparent.png" className="w-full h-full text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-3 bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700">Download CV</h3>
                   <p className="text-gray-600">
-                    Download CV to view more of Mitch Zamoff&apos;s experience
+                    to view more of Mitch Zamoff&apos;s experience
                   </p>
                 </CardContent>
               </Card>
@@ -205,7 +186,7 @@ export default function ZamoffADRLanding() {
                     <Badge
                       key={index}
                       variant="outline"
-                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50"
+                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50 text-lg"
                     >
                       {area}
                     </Badge>
@@ -214,13 +195,13 @@ export default function ZamoffADRLanding() {
               })}
             </div>
           </div>
-          <div>            
-            <div className="max-h-80 max-w-120 overflow-hidden rounded-lg shadow-lg mx-auto">
-            <img
-              src="/speaking-at-podium.jpeg"
-              alt="Healthcare professionals in meeting"
-              className="w-full"
-            /></div>
+          <div>
+            <div className="max-w-120 overflow-hidden rounded-lg shadow-lg mx-auto">
+              <img
+                src="/speaking-at-pod.jpeg"
+                alt="Healthcare professionals in meeting"
+                className="w-full"
+              /></div>
           </div>
         </div>
       </section>
@@ -340,7 +321,7 @@ export default function ZamoffADRLanding() {
 
           <div className="text-center mt-12">
             <a href="mailto:mitch@zamoffadr.com" target="_blank">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 mr-4 mb-4">
+              <Button size="lg" className="bg-amber-600 hover:bg-amber-700 mr-4 mb-4">
                 Schedule
               </Button>
             </a>

@@ -1,7 +1,7 @@
 from PIL import Image
 
 # Load image
-image = Image.open("public/logo_trans.png").convert("RGBA")
+image = Image.open("public/zamoffADR-transparent.png").convert("RGBA")
 pixels = image.load()
 
 width, height = image.size
@@ -12,8 +12,7 @@ for x in range(width):
         r, g, b, a = pixels[x, y]
 
         # If pixel is not white AND not fully transparent
-        if a > 0 and (r, g, b) != (255, 255, 255):
-            pixels[x, y] = (255, 255, 255, 1)  # Make it white, keep alpha
-
+        if a == 255 and (r, g, b) != (0,0,0):
+            pixels[x, y] = (255, 255, 255, 255)  # Make it white
 # Save result
-image.save("public/logo_2.png")
+image.save("public/zamoffADR-white-transparent.png")

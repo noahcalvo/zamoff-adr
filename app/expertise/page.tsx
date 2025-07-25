@@ -157,8 +157,8 @@ export default function Expertise() {
             {expertiseContent.map(([title, IconComponent, points], index) => {
               const id = slugify(title)
               return (
-                <section id={id} key={index} className="scroll-m-24">
-                <Card key={index} id={id} className="border-0 shadow-xl overflow-hidden">
+                <section id={id} key={index} className="scroll-m-24 shadow-xl rounded-lg">
+                <Card key={index} id={id} className="border-0 overflow-hidden -border-8 rounded-lg">
                   <CardHeader className="bg-gray-100 border-b pt-6">
                     <div className="flex items-center gap-4">
                       <div className="p-3 bg-blue-100 rounded-lg">

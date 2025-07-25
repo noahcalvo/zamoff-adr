@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Navvy from "@/components/ui/navbar"
 import Footy from "@/components/ui/footer"
-import { Building2, Users, FileText, Scale, Shield, Pill, Hospital, DollarSign, Gavel, Network } from "lucide-react"
+import { Building2, Users, FileText, Scale, Shield, Pill, DollarSign, Gavel, Network } from "lucide-react"
 
 export default function HealthcarePage() {
   const specificMatters = [
@@ -35,7 +35,7 @@ export default function HealthcarePage() {
     { title: "Unlawful Inducements", icon: Shield, description: "Referral and inducement allegations" },
     { title: "Antitrust/IP Disputes", icon: Scale, description: "Healthcare antitrust and intellectual property" },
     { title: "Privacy Issues", icon: Shield, description: "HIPAA, HITECH and state laws" },
-    { title: "340B Program Disputes", icon: Pill, description: "Drug pricing issues"}
+    { title: "340B Program Disputes", icon: Pill, description: "Drug pricing issues" }
   ]
 
   const disputantTypes = [
@@ -82,32 +82,40 @@ export default function HealthcarePage() {
     "Unfair Competition",
   ]
 
+  const bigPicture = [
+    "AAA Healthcare Panel",
+    "AAA Healthcare Panel (Featured Panelist)",
+    "AHLA Panel (Neutral of the Month)",
+    "Former UnitedHealth Group General Counsel",
+    "Former Hogan Lovells Healthcare Litigator",
+    "Original Member of AAA Healthcare Advisory Council"
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <Navvy />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12 items-center">
-            <div className="col-span-2">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
               <h1 className="text-5xl font-bold mb-6">Healthcare Law Expertise</h1>
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-md text-blue-100 mb-8">
                 Substantial experience arbitrating, mediating, and litigating disputes involving healthcare entities and
                 health law across all sectors of the industry.
               </p>
-              <div className="flex gap-4 flex-wrap">
-                <Badge className="bg-blue-600 text-white px-4 py-2">AAA Healthcare Panel</Badge>
-                <Badge className="bg-blue-600 text-white px-4 py-2">AAA Healthcare Panel (Featured Panelist)</Badge>
-                <Badge className="bg-blue-600 text-white px-4 py-2">AHLA Panel (Neutral of the Month)</Badge>
-                <Badge className="bg-blue-600 text-white px-4 py-2">Former UnitedHealth Group General Counsel</Badge>
-                <Badge className="bg-blue-600 text-white px-4 py-2">Former Hogan Lovells Healthcare Litigator</Badge>
-                <Badge className="bg-blue-600 text-white px-4 py-2">Original Member of AAA Healthcare Advisory Council</Badge>
+              <div className="">
+                {bigPicture.map((item, index) => (
+                  <li className="list-none my-2" key={index}>
+                    <Badge className="bg-blue-600 text-white px-4 py-2 text-md">{item}</Badge>
+                  </li>
+                ))}
               </div>
             </div>
             <div>
               <img
-                src="/healthcare-professional.jpg"
-                alt="Healthcare professionals in meeting"
+                src="/doctor-signing.jpg"
+                alt="Doctor signing a paper"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -121,7 +129,7 @@ export default function HealthcarePage() {
           <h2 className="text-3xl font-bold text-center mb-12">Specific Healthcare Matters</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specificMatters.map((matter, index) => (
-              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow">
+              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow py-2">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-2 bg-blue-100 rounded-lg flex-shrink-0">
@@ -142,28 +150,38 @@ export default function HealthcarePage() {
       {/* Disputant Types */}
       <section className="py-16 bg-blue-50">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Representative Healthcare Clients</h2>
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {disputantTypes.map((type, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-sm text-center">
-                <Hospital className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="font-medium text-gray-800 text-sm">{type}</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>          
+              <h2 className="text-3xl font-bold text-center mb-8">Representative Healthcare Clients</h2>
+              <div className="flex flex-wrap justify-center">
+                {disputantTypes.map((type, index) => (
+                  <div key={index} className="w-32 h-24 bg-white p-2 rounded-lg shadow-lg text-center text-md flex justify-center items-center m-2">
+                    <p className="font-medium text-gray-800 text-sm">{type}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+
+            </div>
+            <img
+              src="/clinic.jpg"
+              alt="Physcician working on patient"
+              className="rounded-lg shadow-xl md:block hidden"
+            />
+
           </div>
         </div>
       </section>
 
       {/* Key Issues */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-12">
           <h2 className="text-3xl font-bold text-center mb-12">Healthcare Law Issues Handled</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 items-center mx-auto">
             {keyIssues.map((issue, index) => (
               <Badge
                 key={index}
                 variant="outline"
-                className="p-3 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50"
+                className="p-3 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50 mx-auto"
               >
                 {issue}
               </Badge>
@@ -183,7 +201,7 @@ export default function HealthcarePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:mitch@zamoffadr.com" target="_blank">
               <button className="bg-white text-blue-900 hover:bg-blue-200 hover:cursor-pointer px-8 py-3 rounded-lg font-medium transition-colors">
-              Schedule
+                Schedule
               </button>
             </a>
             <a href="resume.pdf" download>
