@@ -147,7 +147,7 @@ export default function ZamoffADRLanding() {
             <a href="resume.pdf" download>
               <Card className="border-0 shadow-lg sm:py-6">
                 <CardContent className="p-8 text-center">
-                  <img src="/ZamoffADR-transparent.png" className="w-full h-full text-blue-600 mx-auto mb-4" />
+                  <img src="/zamoffADR-transparent.png" className="w-full h-full text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-3 bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700">Download CV</h3>
                   <p className="text-gray-600">
                     to view more of Mitch Zamoff&apos;s experience
