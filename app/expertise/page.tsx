@@ -1,9 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Navvy from "@/components/ui/navbar"
-import { Scale, Shield, Heart, Building, FileText, Users } from "lucide-react"
+import { Scale, Shield, Building, FileText, Users, Heart } from "lucide-react"
 import type { ElementType } from "react";
 import Link from "next/link"
-import Footy from "@/components/ui/footer";
 
 export default function Expertise() {
   const expertiseContent: [string, ElementType, string[]][] = [
@@ -27,29 +25,22 @@ export default function Expertise() {
       "Healthcare",
       Heart,
       [
-        "Contract interpretation and federal/state health laws",
-        "Disputes between health insurers, hospitals, physicians, and medical groups",
-        "Third-party administrators and treatment facilities",
-        "PBMs and healthcare service providers",
-        "Utilization management and medical necessity",
-        "Coordination of benefits and fee schedule interpretation",
-        "Allowed amounts, covered services, and eligible expenses",
-        "Negotiated rates and clean claim issues",
-        "Network terminations and 'usual and customary' rates",
-        "HIPAA, FCA, ACA, and ERISA compliance",
-        "Software contracts and outsourcing agreements",
-        "ASO contracts and partnership arrangements",
-        "Claims sampling in payor-provider disputes",
-        "Antitrust and intellectual property disputes",
-        "Contract disputes in pharma/biotech sector",
-        "Federal and state law compliance issues",
-        "False Claims Act violations",
-        "Anti-Kickback Act violations",
-        "Coding and reimbursement issues",
-        "Healthcare provider-pharmaceutical company relationships",
-        "Medical device company disputes",
-        "Out-of-network claims and 340B drug pricing program",
-        "Coding, prior authorization, and experimental treatments",
+        "Payor-provider disputes",
+        "Healthcare contracts",
+        "Health regulatory issues",
+        "PBM pricing and reimbursement",
+        "Medicare/Medicaid bid protests",
+        "Health plan-TPA disputes",
+        "Coding and reimbursement",
+        "Health plan and provider vendor agreements",
+        "Revenue cycle management",
+        "Pharmaceutical pricing",
+        "Brand/generic competition issues",
+        "Disputes about healthcare transactions",
+        "Health plan and PBM networks",
+        "Healthcare antitrust and competition",
+        "Health law privacy and data breaches",
+        "340B program"
       ],
     ],
     [
@@ -59,11 +50,11 @@ export default function Expertise() {
         "Health insurance policy disputes",
         "General Commercial Liability (GCL) claims",
         "Directors & Officers (D&O) insurance",
-        "Employment Practices Liability Insurance",
+        "Employment Practices Liability insurance",
         "Errors & Omissions (E&O) insurance",
         "Other commercial insurance policies",
         "Insurer-insured relationship disputes",
-        "Health insurance law specialization",
+        "Claims handling practices",
       ],
     ],
     [
@@ -76,34 +67,38 @@ export default function Expertise() {
         "False advertising claims",
         "Competition law violations",
         "Market manipulation allegations",
+        "Brand-generic competition",
+        "FIFRA pesticide compensation disputes"
       ],
     ],
     [
       "Employment Law and Whistleblower Actions",
       Users,
       [
-        "Alleged employment discrimination cases",
-        "Alleged sexual harassment disputes",
+        "Employment discrimination",
+        "Sexual harassment",
         "Alleged violations of employment agreements",
         "Enforcement of non-competition provisions",
         "Enforcement of non-solicitation provisions",
         "Alleged violations of employment law statutes",
-        "Employment law regulatory compliance",
-        "Retaliation claims and whistleblower actions"
+        "Retaliation claims",
+        "False Claims Act and other whistleblower actions"
       ],
     ],
     [
       "Complex Business Disputes",
       Building,
       [
-        "Multi-jurisdictional healthcare law matters",
-        "Complex contract law disputes",
-        "Antitrust and competition law violations",
-        "Insurance law complications",
-        "Employment law disputes",
-        "Alleged fraud and deceptive practices",
-        "Statutory and regulatory violations",
-        "Compliance issues and government investigations",
+        "Breach of contract",
+        "Fraud and misrepresentation",
+        "Business torts",
+        "Fiduciary duty claims",
+        "Shareholder and partnership disputes",
+        "Unfair competition",
+        "Tortious interference actions",
+        "Employment law and non-compete claims",
+        "Insurance coverage",
+        "Real estate disputes"
       ],
     ],
     [
@@ -139,16 +134,16 @@ export default function Expertise() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navvy />
       {/* Header Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16 flex px-8 items-center">
+        <div className="max-w-6xl mx-auto px-6 ">
           <h1 className="text-5xl font-bold mb-6">Areas of Expertise</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
             Comprehensive ADR services across diverse practice areas, backed by decades of experience in complex
             commercial disputes and specialized industry knowledge.
           </p>
         </div>
+        <img src="podium-wide.jpeg" className="max-h-72 rounded-lg shadow-xl"/>
       </section>
       {/* Expertise Content */}
       <section className="mt-4">
@@ -169,7 +164,7 @@ export default function Expertise() {
                         </CardTitle>
                         {title == "Healthcare" && 
                           <Link href="/healthcare" className="text-blue-600 transition-colors hover:text-blue-200">
-                            View Healthcare page
+                            Learn more about Mitch Zamoff&apos;s healthcare work →
                           </Link>}
                       </div>
                     </div>
@@ -222,7 +217,6 @@ export default function Expertise() {
           </div>
         </div>
       </section>
-      <Footy />
     </div>
   )
 }

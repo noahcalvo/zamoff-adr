@@ -50,12 +50,12 @@ function NavLinks() {
         Healthcare
       </Link>
       <Link href="/education" className="hover:text-blue-200 transition-colors">
-        Education & Awards
+        Education & Honors
       </Link>
       <Link href="/publications" className="hover:text-blue-200 transition-colors">
-        Publications & Speaking
+        Publications & Presentations
       </Link>
-      <Link href="/#contact" className="hover:text-blue-200 transition-colors">
+      <Link href="/contact" className="hover:text-blue-200 transition-colors">
         Contact
       </Link>
     </>
