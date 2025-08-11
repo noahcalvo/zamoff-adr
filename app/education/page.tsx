@@ -71,7 +71,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="honors" className="py-10 bg-gray-50">
+      <section id="honors" className="py-10 bg-gray-50 lg:px-16">
 
         {/* Honors Section */}
         <div className="container mx-auto px-4">

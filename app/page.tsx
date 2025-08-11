@@ -115,6 +115,14 @@ export default function ZamoffADRLanding() {
       {/* Expertise Section */}
       <section id="expertise" className="py-10 sm:py-20 overflow-x-hidden">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-4">
+        <div>
+            <div className="max-w-60 sm:max-w-full overflow-hidden rounded-lg shadow-lg mx-auto w-full">
+              <img
+                src="/speaking-at-pod.jpeg"
+                alt="Healthcare professionals in meeting"
+                className="w-full max-w-full h-auto"
+              /></div>
+          </div>
           <div className="lg:col-span-2 px-6 w-full">
             <div className="text-center mb-8">
               <Link href="/expertise">
@@ -147,14 +155,6 @@ export default function ZamoffADRLanding() {
                 );
               })}
             </div>
-          </div>
-          <div>
-            <div className="max-w-60 sm:max-w-full overflow-hidden rounded-lg shadow-lg mx-auto w-full">
-              <img
-                src="/speaking-at-pod.jpeg"
-                alt="Healthcare professionals in meeting"
-                className="w-full max-w-full h-auto"
-              /></div>
           </div>
         </div>
       </section>
