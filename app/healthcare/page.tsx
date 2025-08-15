@@ -65,8 +65,8 @@ export default function HealthcarePage() {
       <section className="relative max-h-108 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10 max-h-108"></div>
         <img
-          src="/stockPhoto.png"
-          alt="Doctor signing a paper" className="absolute inset-0 w-full max-h-108 object-cover"
+          src="/doctor-holds-hand.jpg"
+          alt="Doctor holds a patient's hand" className="absolute inset-0 w-full max-h-108 object-cover"
         />
 
         <div className="relative z-20 max-w-6xl mx-auto text-white bg-blue-800/60 h-full py-20">
@@ -142,7 +142,7 @@ export default function HealthcarePage() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">Healthcare Dispute Resolution Expertise</h2>
         <p className="text-xl text-blue-100 mb-8">
-          With decades of experience in health law and deep understanding of industry complexities, Zamoff ADR
+          With decades of experience in health law and a deep understanding of industry complexities, Zamoff ADR
           provides specialized expertise for your most challenging healthcare disputes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

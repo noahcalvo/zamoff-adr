@@ -59,7 +59,7 @@ export default function Page() {
                         B.A., 1989, with distinction
                       </Badge>
                       <div className="space-y-1 text-sm text-gray-700">
-                        <p>• Thomas Jefferson Scholar (full merit scholarship)</p>
+                        <p>• Thomas Jefferson Scholar</p>
                         <p>• Phi Beta Kappa</p>
                       </div>
                     </div>

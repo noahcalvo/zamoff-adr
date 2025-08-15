@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Building2, Briefcase, Scale, Users, Gavel, GraduationCap, Globe, Mail } from "lucide-react"
+import { Contact } from "@/components/ui/contact"
+import { Building2, Briefcase, Scale, Users, Gavel, GraduationCap } from "lucide-react"
 import Link from "next/link"
 
 
@@ -29,12 +29,12 @@ export default function Expertise() {
     {
       title: "General Counsel",
       icon: Building2,
-      description: "General counsel of UnitedHealth Group – a Fortune 10 health services and benefits company"      
+      description: "General counsel of UnitedHealth Group – a Fortune 10 health services and benefits company"
     },
     {
       title: "Federal Prosecutor",
       icon: Gavel,
-      description: "Assistant United States Attorney (DOJ) for the Eastern District of Pennsylvania"      
+      description: "Assistant United States Attorney (DOJ) for the Eastern District of Pennsylvania"
     }
   ]
 
@@ -43,10 +43,9 @@ export default function Expertise() {
     <div className="min-h-screen bg-white">
       {/* Professional Roles */}
       <section className="py-16">
-      <div className="max-w-3xl mx-auto px-4 text-center pb-8">
+        <div className="max-w-3xl mx-auto px-4 text-center pb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-            Extensive Experience as a
-            <span className="block md:inline text-blue-600">{" "}Neutral in High-Stakes Disputes</span>
+            Extensive Experience as a Neutral in High-Stakes Disputes
           </h1>
         </div>
         <div className="max-w-6xl mx-auto px-6">
@@ -88,7 +87,7 @@ export default function Expertise() {
 
       <section className="mb-12">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Areas of Expertise</h2>
+          <h2 className="text-3xl font-bold text-center">Areas of Expertise</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-center justify-items-center mb-12">
             <img className="rounded-md shadow-lg self-center sm:max-h-64 w-full mb-4 sm:mb-0 h-auto sm:w-auto" src="/speaking-in-class-crop.png" alt="Mitch speaking in class at the University of Minnesota" />
             <div className="flex flex-wrap gap-4 col-span-2">
@@ -114,46 +113,7 @@ export default function Expertise() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Ready to Resolve Your Dispute?</h2>
-            <p className="text-xl text-gray-300">Contact Mitch Zamoff for expert arbitration and mediation services</p>
-          </div>
-
-          <div className="flex text-center justify-center gap-x-8">
-            <div>
-              <Mail className="w-8 h-8 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-300">mitch@zamoffadr.com</p>
-            </div>
-            <div>
-              <Globe className="w-8 h-8 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-gray-300">Minneapolis, MN</p>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <a href="mailto:mitch@zamoffadr.com" target="_blank">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 mr-4 mb-4">
-                Schedule
-              </Button>
-            </a>
-            <a href="resume.pdf" download>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent"
-              >
-                Download CV
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+      <Contact />
     </div>
   )
 }

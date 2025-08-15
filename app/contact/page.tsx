@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <section className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white py-16 min-h-[calc(100vh-13.5rem)]">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h1 className="text-5xl font-extrabold mb-4 tracking-tight">Get in Touch</h1>
+        <h1 className="text-5xl font-extrabold mb-4 tracking-tight">Contact Zamoff ADR</h1>
         <p className="text-lg text-gray-300 mb-14">
         Contact Mitch Zamoff to discuss arbitration and mediation services.
         </p>
@@ -28,6 +28,7 @@ export default function ContactPage() {
             </svg>
             <h2 className="text-2xl font-semibold mb-1">Location</h2>
             <p className="text-gray-400">United States</p>
+            <p className="text-gray-400 text-xs">(based in Minneapolis)</p>
           </div>
         </div>
 
@@ -35,7 +36,7 @@ export default function ContactPage() {
           href="mailto:mitch@zamoffadr.com"
           className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-md transition-colors"
         >
-          Schedule a Consultation
+          Contact
         </Link>
       </div>
     </section>

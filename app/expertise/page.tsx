@@ -48,10 +48,10 @@ export default function Expertise() {
       Shield,
       [
         "Health insurance policy disputes",
-        "General Commercial Liability (GCL) claims",
-        "Directors & Officers (D&O) insurance",
+        "General Commercial Liability claims",
+        "Directors & Officers insurance",
         "Employment Practices Liability insurance",
-        "Errors & Omissions (E&O) insurance",
+        "Errors & Omissions insurance",
         "Other commercial insurance policies",
         "Insurer-insured relationship disputes",
         "Claims handling practices",
@@ -62,7 +62,7 @@ export default function Expertise() {
       Scale,
       [
         "Alleged price fixing violations",
-        "Sherman Act violation claims",
+        "Sherman Act",
         "Pharmaceutical pricing disputes",
         "False advertising claims",
         "Competition law violations",
@@ -143,7 +143,7 @@ export default function Expertise() {
             commercial disputes and specialized industry knowledge.
           </p>
         </div>
-        <img src="podium-wide.jpeg" className="max-h-72 rounded-lg shadow-xl"/>
+        <img src="podium-cropped.jpeg" className="max-h-72 rounded-lg shadow-xl"/>
       </section>
       {/* Expertise Content */}
       <section className="mt-4">
@@ -164,7 +164,7 @@ export default function Expertise() {
                         </CardTitle>
                         {title == "Healthcare" && 
                           <Link href="/healthcare" className="text-blue-600 transition-colors hover:text-blue-200">
-                            Learn more about Mitch Zamoff&apos;s healthcare work →
+                            Learn more about Mitch Zamoff&apos;s healthcare expertise →
                           </Link>}
                       </div>
                     </div>

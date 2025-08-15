@@ -28,6 +28,7 @@ export function Contact () {
           </svg>
           <h3 className="text-lg font-semibold mb-2">Location</h3>
           <p className="text-gray-300">United States</p>
+          <p className="text-gray-400 text-xs">(based in Minneapolis)</p>
         </div>
       </div>
 

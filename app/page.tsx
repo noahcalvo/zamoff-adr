@@ -66,7 +66,7 @@ export default function ZamoffADRLanding() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-6xl mx-auto px-6 text-center text-white">
-          <div className="w-48 h-48 overflow-hidden rounded-full mx-auto mb-6 border-4 border-white/20 mt-8">
+          <div className="w-80 h-80 overflow-hidden rounded-full mx-auto mb-6 border-4 border-white/20 mt-8">
             <img
               src="/zamoff-headshot-full.jpeg"
               alt="Mitch Zamoff"
@@ -86,7 +86,7 @@ export default function ZamoffADRLanding() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience That Matters</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Robust experience as an arbitrator, mediator, leader of ADR organizations, ADR practitioner, corporate leader, and ADR educator
+              Extensive experience as an arbitrator, mediator, leader of ADR organizations, ADR practitioner, corporate leader, and ADR educator
             </p>
           </div>
 
