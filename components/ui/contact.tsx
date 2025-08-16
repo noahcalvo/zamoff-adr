@@ -4,7 +4,7 @@ import { Button } from "./button"
 
 export function Contact () {
   return(
-    <section id="contact" className="py-20 bg-gray-900 text-white">
+    <section id="contact" className="py-12 bg-gray-900 text-white">
     <div className="max-w-6xl mx-auto px-6">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Ready to Resolve Your Dispute?</h2>
@@ -34,7 +34,7 @@ export function Contact () {
 
       <div className="text-center mt-12">
         <a href="mailto:mitch@zamoffadr.com" target="_blank">
-          <Button size="lg" className="bg-amber-600 hover:bg-amber-700 mr-4 mb-4 hover:cursor-pointer">
+          <Button size="lg" className="bg-amber-600 hover:bg-amber-700 mr-4 mb-4 hover:cursor-pointer text-lg">
             Schedule
           </Button>
         </a>

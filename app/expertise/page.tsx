@@ -1,7 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Scale, Shield, Building, FileText, Users, Heart } from "lucide-react"
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Scale, Shield, Building, FileText, Users, Heart } from "lucide-react";
 import type { ElementType } from "react";
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Expertise() {
   const expertiseContent: [string, ElementType, string[]][] = [
@@ -106,9 +108,9 @@ export default function Expertise() {
       Scale,
       [
         "Products liability",
-        "Pharmaceuticals", 
-        "Medical devices", 
-        "Environmental", 
+        "Pharmaceuticals",
+        "Medical devices",
+        "Environmental",
         "Toxic torts",
         "Serious personal injury claims"
       ]
@@ -134,64 +136,109 @@ export default function Expertise() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16 flex px-8 items-center">
-        <div className="max-w-6xl mx-auto px-6 ">
-          <h1 className="text-5xl font-bold mb-6">Areas of Expertise</h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
-            Comprehensive ADR services across diverse practice areas, backed by decades of experience in complex
-            commercial disputes and specialized industry knowledge.
-          </p>
+      {/* Header / Hero */}
+      <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white">
+        <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-3 gap-8 items-center">
+          <div className="col-span-2">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Areas of Expertise</h1>
+            <p className="text-lg text-blue-100 max-w-2xl">
+              Comprehensive ADR services across diverse practice areas, backed by decades of experience in complex commercial disputes.
+            </p>
+          </div>
+          {/* LCP image with next/image to improve Performance */}
+          <div className="relative aspect-[4/3] md:aspect-[3/2] rounded-lg overflow-hidden shadow-xl max-w-sm">
+            <Image
+              src="/podium-cropped.jpeg"
+              alt="Mitch Zamoff presenting at a podium"
+              fill
+              priority
+              sizes="(max-width: 500px) 100vw, 30vw"
+              className="object-cover"
+            />
+          </div>
         </div>
-        <img src="podium-cropped.jpeg" className="max-h-72 rounded-lg shadow-xl"/>
       </section>
+      
+      {/* Expiremental Secondary Nav bar */}
+      {/* <nav aria-label="Expertise sections" className="border-b bg-white/70 backdrop-blur sticky top-18 z-30">
+        <div className="max-w-6xl mx-auto px-6">
+          <ul className="flex flex-wrap gap-2 py-3">
+            {expertiseContent.map(([ title ]) => (
+              <li key={title}>
+                <Link
+                  href={`#${slugify(title)}`}
+                  className="inline-flex items-center rounded-md px-3.5 py-2 text-sm font-medium
+                       border border-gray-200 hover:border-blue-400
+                       hover:bg-blue-50 focus:outline-none focus-visible:ring-2
+                       focus-visible:ring-blue-500/70"
+                >
+                  {title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav> */}
+
       {/* Expertise Content */}
+
       <section className="mt-4">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12">
-            {expertiseContent.map(([title, IconComponent, points], index) => {
+            {expertiseContent.map(([title, IconComponent, points]) => {
               const id = slugify(title)
+              const half = Math.ceil(points.length / 2);
               return (
-                <section id={id} key={index} className="scroll-m-24 shadow-xl rounded-lg">
-                <Card key={index} id={id} className="border-0 overflow-hidden -border-8 rounded-lg">
-                  <CardHeader className="bg-gray-100 border-b pt-6">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-blue-100 rounded-lg">
-                        <IconComponent className="w-8 h-8 text-blue-600" />
+                <section id={id} key={title} aria-labelledby={`${id}-title`} className="scroll-m-24">
+                  <Card className="border-0 overflow-hidden rounded-lg shadow-xl">
+                    <CardHeader className="bg-gray-100 border-b pt-6">
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 bg-blue-100 rounded-lg" aria-hidden="true">
+                          <IconComponent className="w-8 h-8 text-blue-600" />
+                        </div>
+                        <div>
+                          {/* h2 for section heading improves a11y hierarchy */}
+                          <h2
+                            id={`${id}-title`}
+                            className="text-2xl text-gray-900 font-semibold leading-none tracking-tight"
+                          >
+                            {title}
+                          </h2>
+
+                          {title === "Healthcare" && (
+                            <Link
+                              href="/healthcare"
+                              className="text-blue-700 hover:text-blue-800 underline underline-offset-4"
+                            >
+                              Learn more about Healthcare →
+                            </Link>
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        <CardTitle className="text-2xl text-gray-900">{title}
-                        </CardTitle>
-                        {title == "Healthcare" && 
-                          <Link href="/healthcare" className="text-blue-600 transition-colors hover:text-blue-200">
-                            Learn more about Mitch Zamoff&apos;s healthcare expertise →
-                          </Link>}
+                    </CardHeader>
+                    <CardContent className="p-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-700">
+                        <ul className="list-none space-y-3">
+                          {points.slice(0, half).map((point) => (
+                            <li key={point} className="flex items-start gap-3">
+                              <span className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0" aria-hidden="true" />
+                              <span className="leading-relaxed">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <ul className="list-none space-y-3">
+                          {points.slice(half).map((point) => (
+                            <li key={point} className="flex items-start gap-3">
+                              <span className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0" aria-hidden="true" />
+                              <span className="leading-relaxed">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-600">
-                      <ul className="list-none space-y-3">
-                        {points.slice(0, Math.ceil(points.length / 2)).map((point, i) => (
-                          <li key={i} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                            <span className="leading-relaxed">{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <ul className="list-none space-y-3">
-                        {points.slice(Math.ceil(points.length / 2)).map((point, i) => (
-                          <li key={i} className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
-                            <span className="leading-relaxed">{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
                 </section>
-              )
+              );
             })}
           </div>
 

@@ -1,47 +1,38 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  FileText,
-  BookOpen, Award
+import { Award
 } from "lucide-react"
 import { Contact } from "@/components/ui/contact"
-
 
 const publications = [
   {
     title: "The FAA's Silence on Arbitral Disclosures: A Pressing Problem in the Social Media Age",
     publication: "THE FEDERAL ARBITRATION ACT: SUCCESSES, FAILURES, AND A ROADMAP FOR REFORM (Cambridge University Press)",
     year: 2025,
-    icon: BookOpen,
   },
   {
     title: "The Seven Essential Law School Simulation Courses",
     publication: "2024 Utah Law Review 997",
     year: 2024,
-    icon: BookOpen,
   },
   {
     title: "“Criminalizing” Depositions in Arbitration",
     publication: "108 Minnesota Law Review 2437",
     year: 2024,
-    icon: BookOpen,
   },
   {
     title: "Transparent Connections: Arbitrators, Attorneys, Parties and Social Media Disclosures",
     publication: "AAA-ICDR Blog & News",
     year: 2024,
-    icon: FileText,
   },
   {
     title: "Safeguarding Confidential Arbitration Awards in Uncontested Confirmation Actions",
     publication: "59 American Business Law Journal 505",
     year: 2022,
-    icon: BookOpen,
   },
   {
     title: "Proposed Guidelines for Arbitral Disclosure of Social Media Activity",
     publication: "23 Cardozo Journal of Conflict Resolution 1",
     year: 2022,
-    icon: Award,
     highlight: "Selected as Best ADR Scholarly Article of the Year by AALS ADR Section",
   }
 ]

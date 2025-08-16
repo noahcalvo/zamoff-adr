@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navvy() {
@@ -10,13 +11,25 @@ export default function Navvy() {
   return (
     <nav className="bg-blue-900 text-white py-4 sticky top-0 z-30">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-      <Link href="/#experience" className="hover:text-blue-200 transition-colors">
-        <img src="/zamoffADR-white-transparent.png" alt="Zamoff ADR" className="h-10 object-cover object-center hover:bg-blue-800" />
-      </Link>
+        <Link
+          href="/#experience"
+          className="hover:text-blue-200 transition-colors flex items-center mr-2"
+        >
+          <Image
+            src="/zamoffADR-white-transparent.png"
+            alt="Zamoff ADR"
+            width={104}
+            height={40}   // equals Tailwind h-10
+            priority
+            className="object-contain"
+          />
+        </Link>
+
         {/* Hamburger toggle button */}
         <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

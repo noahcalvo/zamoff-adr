@@ -1,5 +1,8 @@
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Building2, Users, FileText, Scale, Shield, Pill, DollarSign, Gavel, Network } from "lucide-react"
+import heroImg from "@/public/doctor-holds-hand.jpg"
+import hospitalImg from "@/public/hospital.jpg"
 
 export default function HealthcarePage() {
   const specificMatters = [
@@ -64,9 +67,14 @@ export default function HealthcarePage() {
       {/* Hero Section */}
       <section className="relative max-h-108 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10 max-h-108"></div>
-        <img
-          src="/doctor-holds-hand.jpg"
-          alt="Doctor holds a patient's hand" className="absolute inset-0 w-full max-h-108 object-cover"
+        <Image
+          src={heroImg}
+          alt="Physician offering supportive care by holding a patient's hand"
+          className="absolute inset-0 w-full max-h-108 object-cover"
+          priority
+          fetchPriority="high"
+          placeholder="blur"
+          layout="fill"
         />
 
         <div className="relative z-20 max-w-6xl mx-auto text-white bg-blue-800/60 h-full py-20">
@@ -127,12 +135,18 @@ export default function HealthcarePage() {
             </div>
 
           </div>
-          <img
-            src="/hospital.jpg"
-            alt="Exterior view of hospital"
-            className="rounded-lg shadow-xl md:block hidden h-full"
-          />
-
+          <div className="relative w-full rounded-lg shadow-xl overflow-hidden">
+              <Image
+                src={hospitalImg}
+                alt="Exterior view of a modern hospital"
+                fill
+                className="object-cover"
+                loading="lazy"
+                decoding="async"
+                sizes="(min-width: 768px) 50vw, 100vw"
+                placeholder="blur"
+              />
+            </div>
         </div>
       </div>
       </section >
