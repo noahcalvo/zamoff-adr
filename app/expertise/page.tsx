@@ -158,7 +158,7 @@ export default function Expertise() {
           </div>
         </div>
       </section>
-      
+
       {/* Expiremental Secondary Nav bar */}
       {/* <nav aria-label="Expertise sections" className="border-b bg-white/70 backdrop-blur sticky top-18 z-30">
         <div className="max-w-6xl mx-auto px-6">
@@ -249,16 +249,20 @@ export default function Expertise() {
               With extensive experience across these practice areas, Zamoff ADR provides the specialized expertise needed
               to resolve your most complex disputes efficiently and effectively.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:mitch@zamoffadr.com" target="_blank">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                  Schedule
-                </button>
+            <div className="flex flex-col sm:flex-row gap-8 justify-center">
+              <a
+                href="mailto:mitch@zamoffadr.com"
+                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white h-12 px-10 rounded-lg font-medium text-lg transition-colors"
+              >
+                Schedule
               </a>
-              <a href="resume.pdf" download>
-                <button className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                  Download CV
-                </button>
+
+              <a
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center justify-center border border-blue-600 text-blue-600 hover:bg-blue-200 hover:text-black h-12 px-10 rounded-lg font-medium transition-colors"
+              >
+                Download CV
               </a>
             </div>
           </div>

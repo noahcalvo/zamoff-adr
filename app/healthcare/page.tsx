@@ -79,63 +79,63 @@ export default function HealthcarePage() {
 
         <div className="relative z-20 max-w-6xl mx-auto text-white bg-blue-800/60 h-full py-20">
           <h1 className="text-5xl font-bold mb-6 px-4 w-full text-center">Healthcare Disputes</h1>
-          <p className="text-md font-semibold text-blue-100 mb-8 px-4 w-full px-20 py-10 -mt-12">
+          <p className="text-md font-semibold text-blue-100 mb-8 px-4 w-full py-10 -mt-12">
             Substantial experience arbitrating and mediating disputes involving healthcare entities and
             health law across all sectors of the industry.
           </p>
         </div>
         <div className="flex gap-4 mb-8 flex-wrap justify-center z-20">
           {bigPicture.map((item, index) => (
-            <a
+            <p
               key={index}
               className="block rounded-full bg-white/60 py-2 px-4 text-center whitespace-nowrap hover:bg-white/30 transition"
             >
               {item}
-            </a>
+            </p>
           ))}
         </div>
       </section >
 
-    {/* Specific Matters */ }
-    < section className = "py-16" >
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Representative Healthcare Matters</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specificMatters.map((matter, index) => (
-            <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow py-2">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-2 bg-blue-100 rounded-lg flex-shrink-0">
-                    <matter.icon className="w-6 h-6 text-blue-600" />
+      {/* Specific Matters */}
+      < section className="py-16" >
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">Representative Healthcare Matters</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {specificMatters.map((matter, index) => (
+              <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow py-2">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-blue-100 rounded-lg flex-shrink-0">
+                      <matter.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">{matter.title}</h3>
+                      <p className="text-sm text-gray-600">{matter.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{matter.title}</h3>
-                    <p className="text-sm text-gray-600">{matter.description}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-      </section >
-
-    {/* Disputant Types */ }
-    < section className = "py-16 bg-blue-50" >
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-4">
-          <div>
-            <h2 className="text-3xl font-bold text-center mb-8">Representative Healthcare Clients</h2>
-            <div className="flex flex-wrap justify-center">
-              {disputantTypes.map((type, index) => (
-                <div key={index} className="w-32 h-24 bg-white p-2 rounded-lg shadow-lg text-center text-md flex justify-center items-center m-2">
-                  <p className="font-medium text-gray-800 text-sm">{type}</p>
-                </div>
-              ))}
-            </div>
-
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          <div className="relative w-full rounded-lg shadow-xl overflow-hidden">
+        </div>
+      </section >
+
+      {/* Disputant Types */}
+      < section className="py-16 bg-blue-50" >
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <h2 className="text-3xl font-bold text-center mb-8">Representative Healthcare Clients</h2>
+              <div className="flex flex-wrap justify-center">
+                {disputantTypes.map((type, index) => (
+                  <div key={index} className="w-32 h-24 bg-white p-2 rounded-lg shadow-lg text-center text-md flex justify-center items-center m-2">
+                    <p className="font-medium text-gray-800 text-sm">{type}</p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+            <div className="relative w-full rounded-lg shadow-xl overflow-hidden">
               <Image
                 src={hospitalImg}
                 alt="Exterior view of a modern hospital"
@@ -147,31 +147,35 @@ export default function HealthcarePage() {
                 placeholder="blur"
               />
             </div>
+          </div>
         </div>
-      </div>
       </section >
 
-    {/* Call to Action */ }
-    < section className = "py-16 bg-blue-900 text-white" >
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Healthcare Dispute Resolution Expertise</h2>
-        <p className="text-xl text-blue-100 mb-8">
-          With decades of experience in health law and a deep understanding of industry complexities, Zamoff ADR
-          provides specialized expertise for your most challenging healthcare disputes.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="mailto:mitch@zamoffadr.com" target="_blank">
-            <button className="text-white bg-amber-600 hover:bg-amber-700 hover:cursor-pointer px-8 py-3 rounded-lg font-medium transition-colors">
+      {/* Call to Action */}
+      < section className="py-16 bg-blue-900 text-white" >
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-6">Healthcare Dispute Resolution Expertise</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            With decades of experience in health law and a deep understanding of industry complexities, Zamoff ADR
+            provides specialized expertise for your most challenging healthcare disputes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:mitch@zamoffadr.com"
+              className="inline-flex items-center justify-center border border-amber-700 text-white bg-amber-700 hover:bg-amber-800 px-8 h-12 rounded-lg font-medium transition-colors"
+            >
               Schedule
-            </button>
-          </a>
-          <a href="resume.pdf" download>
-            <button className="border border-white text-white hover:bg-white hover:cursor-pointer hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors">
+            </a>
+
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center justify-center border border-white text-white hover:bg-white hover:text-blue-900 px-8 h-12 rounded-lg font-medium transition-colors"
+            >
               Download CV
-            </button>
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
       </section >
     </div >
   )

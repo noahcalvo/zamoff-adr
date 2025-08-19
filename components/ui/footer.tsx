@@ -19,6 +19,7 @@ export default function Footy() {
           className="text-gray-400 hover:text-white transition-colors ml-2"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Mitch Zamoff LinkedIn profile"
         >
           <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8" />
         </a>

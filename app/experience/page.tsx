@@ -58,7 +58,7 @@ export default function ExperiencePage() {
                       <role.icon className="w-6 h-6 text-blue-600" aria-hidden="true" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-2">{role.title}</h3>
+                      <h2 className="font-semibold text-gray-900 mb-2">{role.title}</h2>
                       <p className="text-sm text-gray-600">{role.description}</p>
                     </div>
                   </div>
@@ -67,12 +67,12 @@ export default function ExperiencePage() {
             ))}
 
             {/* Tall photo in the grid, spans two rows on md+ */}
-            <div className="row-span-2 self-center mx-auto w-full p-8">
+            <div className="row-span-2 self-center mx-auto w-full max-w-md p-8">
               <Image
                 src="/speaking-at-mic-tall.jpeg"
                 alt="Mitch Zamoff speaking at a microphone"
-                width={1200}     // portrait-ish source; adjust if you know exact dims
-                height={1600}
+                width={357}     // portrait-ish source; adjust if you know exact dims
+                height={426}
                 loading="lazy"
                 decoding="async"
                 className="rounded-lg shadow-lg w-full h-auto md:[transform:rotateY(180deg)] lg:[transform:rotateY(0deg)]"

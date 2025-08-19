@@ -24,27 +24,28 @@ export default function Page() {
             {/* Law School */}
             <article>
               <Card className="shadow-lg h-full">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
                     <div className="bg-blue-100 p-3 rounded-lg hidden sm:block">
                       <GraduationCap className="w-6 h-6 text-blue-600" aria-hidden="true" />
                     </div>
-                    <div className="flex-1">
-                      <h2 className="text-xl font-bold text-gray-900 mb-2">
+                    <div className="flex flex-wrap items-baseline gap-x-2 min-w-0">
+                      <h2 className="text-xl font-bold text-gray-900">
                         University of Virginia School of Law
                       </h2>
-                      <p className="text-gray-600 mb-3">Charlottesville, VA</p>
-                      <div className="space-y-2">
-                        <Badge variant="secondary" className="bg-blue-50 text-blue-700">
-                          J.D., 1992
-                        </Badge>
-                        <ul className="space-y-1 text-sm text-gray-700 list-disc pl-5">
-                          <li>Order of the Coif</li>
-                          <li>Virginia Law Review</li>
-                          <li>Champion, William Minor Lile Moot Court Competition</li>
-                        </ul>
-                      </div>
+                      <span className="text-gray-600">Charlottesville, VA</span>
                     </div>
+                  </div>
+
+                  <div className="mt-5 space-y-4 mx-16">
+                    <Badge variant="secondary" className="bg-blue-50 text-blue-700">
+                      J.D., 1992
+                    </Badge>
+                    <ul className="space-y-1 text-sm text-gray-700 list-disc pl-5">
+                      <li>Order of the Coif</li>
+                      <li>Virginia Law Review</li>
+                      <li>Champion, William Minor Lile Moot Court Competition</li>
+                    </ul>
                   </div>
                 </CardContent>
               </Card>
@@ -53,36 +54,37 @@ export default function Page() {
             {/* Undergraduate */}
             <article>
               <Card className="shadow-lg h-full">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
                     <div className="bg-orange-100 p-3 rounded-lg hidden sm:block">
                       <GraduationCap className="w-6 h-6 text-orange-600" aria-hidden="true" />
                     </div>
-                    <div className="flex-1">
-                      <h2 className="text-xl font-bold text-gray-900 mb-2">
+                    <div className="flex flex-wrap items-baseline gap-x-2 min-w-0">
+                      <h2 className="text-xl font-bold text-gray-900">
                         University of Virginia
                       </h2>
-                      <p className="text-gray-600 mb-3">Charlottesville, VA</p>
-                      <div className="space-y-2">
-                        <Badge variant="secondary" className="bg-orange-50 text-orange-700">
-                          B.A., 1989, with distinction
-                        </Badge>
-                        <ul className="space-y-1 text-sm text-gray-700 list-disc pl-5">
-                          <li>Thomas Jefferson Scholar</li>
-                          <li>Phi Beta Kappa</li>
-                        </ul>
-                      </div>
+                      <span className="text-gray-600">Charlottesville, VA</span>
                     </div>
+                  </div>
+
+                  <div className="mt-5 space-y-4 mx-16">
+                    <Badge variant="secondary" className="bg-orange-50 text-orange-700">
+                      B.A., 1989, with distinction
+                    </Badge>
+                    <ul className="space-y-1 text-sm text-gray-700 list-disc pl-5">
+                      <li>Thomas Jefferson Scholar</li>
+                      <li>Phi Beta Kappa</li>
+                    </ul>
                   </div>
                 </CardContent>
               </Card>
             </article>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Honors */}
-      <section id="honors" className="py-10 bg-gray-50 lg:px-16 cv-auto">
+      < section id="honors" className="py-10 bg-gray-50 lg:px-16 cv-auto" >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 flex items-center justify-center gap-3">
             <h2 className="text-4xl font-bold text-gray-900">Honors</h2>
@@ -153,7 +155,7 @@ export default function Page() {
             </li>
           </ul>
         </div>
-      </section>
+      </section >
 
       <Contact />
 
@@ -180,6 +182,6 @@ export default function Page() {
           }),
         }}
       />
-    </div>
+    </div >
   )
 }

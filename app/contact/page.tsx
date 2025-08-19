@@ -56,7 +56,7 @@ export default function ContactPage() {
         {/* Primary CTA */}
         <a
           href="mailto:mitch@zamoffadr.com"
-          className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-md transition-colors"
+          className="inline-block bg-orange-700 hover:bg-orange-800 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-md transition-colors"
         >
           Contact
         </a>

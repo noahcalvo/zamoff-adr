@@ -34,7 +34,7 @@ export function Contact () {
 
       <div className="text-center mt-12">
         <a href="mailto:mitch@zamoffadr.com" target="_blank">
-          <Button size="lg" className="bg-amber-600 hover:bg-amber-700 mr-4 mb-4 hover:cursor-pointer text-lg">
+          <Button size="lg" className="bg-amber-700 hover:bg-amber-800 font-semibold hover:cursor-pointer text-lg text-white">
             Schedule
           </Button>
         </a>

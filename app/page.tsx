@@ -85,8 +85,8 @@ export default function ZamoffADRLanding() {
 
             {/* CV Card */}
             <Link href="/resume.pdf" prefetch={false} aria-label="Download CV">
-              <Card className="border-0 shadow-lg sm:py-6 hover:shadow-xl transition-shadow">
-                <CardContent className="p-8 text-center">
+              <Card className="border-0 shadow-lg sm:py-6 hover:shadow-xl transition-shadow flex-1 h-full">
+                <CardContent className="p-8 text-center flex flex-col justify-between h-full">
                   <div className="mx-auto mb-4">
                     <Image
                       src="/zamoffADR-transparent.png"
@@ -99,7 +99,7 @@ export default function ZamoffADRLanding() {
                       className="mx-auto h-auto w-auto"
                     />
                   </div>
-                  <span className="inline-block text-xl font-bold bg-amber-600 text-white py-2 px-4 rounded-lg hover:bg-amber-700">
+                  <span className="mx-auto inline-block text-lg font-bold bg-amber-700 text-white py-2 px-4 rounded-lg hover:bg-amber-800">
                     Download CV
                   </span>
                 </CardContent>
@@ -110,9 +110,9 @@ export default function ZamoffADRLanding() {
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="py-10 sm:py-20 overflow-x-hidden cv-auto">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-4">
-          <div>
+      <section id="expertise" className="p-5 sm:p-10 sm:py-20 overflow-x-hidden cv-auto">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+          <div className="order-2 md:order-1">
             <div className="max-w-60 sm:max-w-full overflow-hidden rounded-lg shadow-lg mx-auto w-full">
               <Image
                 src={podium}
@@ -158,7 +158,7 @@ export default function ZamoffADRLanding() {
                   >
                     <Badge
                       variant="outline"
-                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50 md:text-lg"
+                      className="p-4 text-center justify-center border-blue-200 text-blue-800 hover:bg-blue-50 lg:text-lg"
                     >
                       {area}
                     </Badge>
