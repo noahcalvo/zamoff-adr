@@ -44,12 +44,12 @@ export default function ExperiencePage() {
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 text-center pb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-            Extensive Experience as a Neutral in High-Stakes Disputes
+            Extensive Experience as a Neutral in{" "}
+            <span className="whitespace-nowrap">High-Stakes</span> Disputes
           </h1>
         </div>
-
         <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {professionalRoles.slice(0, 2).map((role, index) => (
               <Card key={index} className="border-0 shadow-md hover:shadow-lg transition-shadow sm:py-6">
                 <CardContent className="p-6">
@@ -155,4 +155,3 @@ export default function ExperiencePage() {
 
 
 
-  

@@ -74,7 +74,7 @@ export default function Expertise() {
       ],
     ],
     [
-      "Employment Law and Whistleblower Actions",
+      "Employment Law & Whistleblower Actions",
       Users,
       [
         "Employment discrimination",

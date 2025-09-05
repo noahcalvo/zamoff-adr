@@ -65,8 +65,8 @@ export default function HealthcarePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative max-h-108 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60 z-10 max-h-108"></div>
+      <section className="relative md:max-h-108 flex items-center justify-center overflow-hidden flex-col md:flex-row">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/70 z-10 max-h-108 h-full w-full"></div>
         <Image
           src={heroImg}
           alt="Physician offering supportive care by holding a patient's hand"
@@ -77,14 +77,14 @@ export default function HealthcarePage() {
           layout="fill"
         />
 
-        <div className="relative z-20 max-w-6xl mx-auto text-white bg-blue-800/60 h-full py-20">
+        <div className="sm:relative z-20 max-w-6xl mx-auto text-white md:bg-blue-800/60 h-full md:py-20 pt-10">
           <h1 className="text-5xl font-bold mb-6 px-4 w-full text-center">Healthcare Disputes</h1>
-          <p className="text-md font-semibold text-blue-100 mb-8 px-4 w-full py-10 -mt-12">
+          <p className="text-md font-semibold text-blue-100 md:mb-8 px-4 w-full py-10 -mt-12">
             Substantial experience arbitrating and mediating disputes involving healthcare entities and
             health law across all sectors of the industry.
           </p>
         </div>
-        <div className="flex gap-4 mb-8 flex-wrap justify-center z-20">
+        <div className="gap-4 mb-8 flex-wrap justify-center z-20 hidden md:flex">
           {bigPicture.map((item, index) => (
             <p
               key={index}
@@ -97,7 +97,7 @@ export default function HealthcarePage() {
       </section >
 
       {/* Specific Matters */}
-      < section className="py-16" >
+      < section className="py-16 z-11" >
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">Representative Healthcare Matters</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

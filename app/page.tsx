@@ -11,7 +11,7 @@ import healthcare from "@/public/healthcare-professional.jpeg"
 
 const experienceCards = [
   { icon: Scale, title: "200+ Cases", description: "Arbitrated and mediated over 200 cases across diverse practice areas and industries" },
-  { icon: Award, title: "AAA Panelist", description: "Member of American Arbitration Association national, healthcare (featured panelist) and consumer arbitration panels" },
+  { icon: Award, title: "AAA Panelist", description: "Member of American Arbitration Association national, healthcare (featured panelist) and consumer arbitration panels and mediation panels" },
   { icon: Shield, title: "AHLA Panelist", description: "Member of American Health Law Association arbitration and mediation panels" },
   { icon: Globe, title: "Leadership", description: "Experience on AAA Board of Directors, Advisory Council, Healthcare Advisory Panel and Conflict Resolution Center of Minnesota Board of Directors" },
   { icon: BookOpen, title: "ADR Professor", description: "Chaired ADR professor and assistant dean at top-20 US law school" },
@@ -144,7 +144,7 @@ export default function ZamoffADRLanding() {
                 "Healthcare",
                 "Insurance Law",
                 "Antitrust & Competition",
-                "Employment Law and Whistleblower Actions",
+                "Employment Law & Whistleblower Actions",
                 "Complex Business Disputes",
                 "Major Tort Claims",
                 "Consumer Protection",
