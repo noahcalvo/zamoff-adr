@@ -19,8 +19,11 @@ export default function Expertise() {
         "Vendor and supplier contracts",
         "Insurance contracts",
         "Healthcare agreements",
-        "Non-disclosure agreements", "Partnership and joint venture agreements", "Franchise contracts",
-        "Loan agreements"
+        "Non-disclosure agreements", 
+        "Partnership and joint venture agreements", 
+        "Franchise contracts",
+        "Loan agreements",
+        "Software development and other technology agreements"
       ],
     ],
     [
