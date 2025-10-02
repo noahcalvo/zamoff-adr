@@ -38,10 +38,10 @@ export default function Page() {
                   </div>
 
                   <div className="mt-5 space-y-4 mx-16">
-                    <Badge variant="secondary" className="bg-blue-50 text-blue-700">
+                    <Badge variant="secondary" className="bg-blue-50 text-blue-700 text-base">
                       J.D., 1992
                     </Badge>
-                    <ul className="space-y-1 text-sm text-gray-700 list-disc pl-5">
+                    <ul className="space-y-1 text-gray-700 list-disc pl-5">
                       <li>Order of the Coif</li>
                       <li>Virginia Law Review</li>
                       <li>Champion, William Minor Lile Moot Court Competition</li>
@@ -68,10 +68,10 @@ export default function Page() {
                   </div>
 
                   <div className="mt-5 space-y-4 mx-16">
-                    <Badge variant="secondary" className="bg-orange-50 text-orange-700">
+                    <Badge variant="secondary" className="bg-orange-50 text-orange-700 text-base">
                       B.A., 1989, with distinction
                     </Badge>
-                    <ul className="space-y-1 text-sm text-gray-700 list-disc pl-5">
+                    <ul className="space-y-1 text-gray-700 list-disc pl-5">
                       <li>Thomas Jefferson Scholar</li>
                       <li>Phi Beta Kappa</li>
                     </ul>
@@ -98,7 +98,7 @@ export default function Page() {
                   <div className="flex items-start gap-4">
                     <Trophy className="w-6 h-6 text-yellow-500 hidden md:block" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900 text-lg">
                         University of Minnesota Award for Outstanding Contributions to Graduate and Professional Education
                       </h3>
                     </div>
@@ -113,7 +113,7 @@ export default function Page() {
                   <div className="flex items-start gap-4">
                     <Star className="w-6 h-6 text-yellow-500 hidden md:block" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">Inductee, Academy of Distinguished Teachers</h3>
+                      <h3 className="font-semibold text-gray-900 text-lg">Inductee, Academy of Distinguished Teachers</h3>
                     </div>
                   </div>
                 </CardContent>
@@ -126,10 +126,10 @@ export default function Page() {
                   <div className="flex items-start gap-4">
                     <Award className="w-6 h-6 text-green-500 hidden md:block" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900 text-lg">
                         Best ADR Scholarly Article of the Year, Association of American Law Schools, ADR Section
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-gray-600">
                         Honoring &quot;Proposed Guidelines for Arbitral Disclosure of Social Media Activity&quot;
                       </p>
                     </div>
@@ -144,10 +144,10 @@ export default function Page() {
                   <div className="flex items-start gap-4">
                     <Trophy className="w-6 h-6 text-orange-500 hidden md:block" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900 text-lg">
                         Stanley V. Kinyon Teacher of the Year Award, University of Minnesota Law School
                       </h3>
-                      <p className="text-sm text-gray-600">Two-time recipient</p>
+                      <p className="text-gray-600">Two-time recipient</p>
                     </div>
                   </div>
                 </CardContent>

@@ -67,7 +67,7 @@ export default function ExperiencePage() {
             ))}
 
             {/* Tall photo in the grid, spans two rows on md+ */}
-            <div className="row-span-2 self-center mx-auto w-full max-w-md p-8">
+            <div className="row-span-2 self-center mx-auto w-full max-w-md">
               <Image
                 src="/speaking-at-mic-tall.jpeg"
                 alt="Mitch Zamoff speaking at a microphone"

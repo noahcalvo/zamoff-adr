@@ -141,26 +141,26 @@ export default function Expertise() {
     <div className="min-h-screen bg-white">
       {/* Header / Hero */}
       <section className="bg-gradient-to-b from-blue-900 to-blue-800 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 grid md:grid-cols-3 gap-8 items-center">
-          <div className="col-span-2">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Areas of Expertise</h1>
-            <p className="text-lg text-blue-100 max-w-2xl">
-              Comprehensive ADR services across diverse practice areas, backed by decades of experience in complex commercial disputes.
-            </p>
-          </div>
-          {/* LCP image with next/image to improve Performance */}
-          <div className="relative aspect-[4/3] md:aspect-[3/2] rounded-lg overflow-hidden shadow-xl max-w-sm">
-            <Image
-              src="/podium-cropped.jpeg"
-              alt="Mitch Zamoff presenting at a podium"
-              fill
-              priority
-              sizes="(max-width: 500px) 100vw, 30vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-6 py-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h1 className="text-4xl md:text-6xl font-bold mb-6">Areas of Expertise</h1>
+      <p className="text-lg text-blue-100 max-w-2xl">
+        Comprehensive ADR services across diverse practice areas, backed by decades of experience in complex commercial disputes.
+      </p>
+    </div>
+    <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl max-w-md">
+      <Image
+        src="/podium-cropped.jpeg"
+        alt="Mitch Zamoff presenting at a podium"
+        fill
+        priority
+        sizes="(max-width: 1000px) 100vw, 50vw"
+        className="object-cover"
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* Expiremental Secondary Nav bar */}
       {/* <nav aria-label="Expertise sections" className="border-b bg-white/70 backdrop-blur sticky top-18 z-30">
