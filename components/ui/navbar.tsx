@@ -11,12 +11,12 @@ export default function Navvy() {
           <Image
             src="/zamoffADR-white-transparent.png"
             alt="Zamoff ADR"
-            width={104} height={40} priority
+            width={156} height={60} priority
             className="object-contain"
           />
         </Link>
 
-        <div className="hidden md:flex gap-x-8 text-sm font-medium items-center">
+        <div className="hidden md:flex gap-x-8 text-md font-medium items-center">
           <NavLinks />
         </div>
 
@@ -39,7 +39,7 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
       <Link href="/healthcare" className={linkClass}>Healthcare</Link>
       <Link href="/education" className={linkClass}>Education & Honors</Link>
       <Link href="/publications" className={linkClass}>Publications & Presentations</Link>
-      <Link href="/contact" className={linkClass}>Contact</Link>
+      <Link href="/contact" className={`${linkClass} text-lg font-bold`}>Contact</Link>
     </>
   )
 }

@@ -15,7 +15,7 @@ const experienceCards = [
   { icon: Shield, title: "AHLA Panelist", description: "Member of American Health Law Association arbitration and mediation panels" },
   { icon: Globe, title: "Leadership", description: "Experience on AAA Board of Directors, Advisory Council, Healthcare Advisory Panel and Conflict Resolution Center of Minnesota Board of Directors" },
   { icon: BookOpen, title: "ADR Professor", description: "Chaired ADR professor and assistant dean at top-20 US law school" },
-  { icon: FileText, title: "ADR Authority", description: "Frequent presenter and author on issues relating to arbitration law and practice" },
+  { icon: FileText, title: "ADR Expert", description: "Frequent presenter and author on issues relating to arbitration law and practice" },
   { icon: Scale, title: "ADR Practitioner", description: "General Counsel of Fortune 10 company and ADR practitioner at major international law firm" },
   { icon: Users, title: "Healthcare Expert", description: "Trainer for former judges joining AAA healthcare panel" },
 ]
@@ -42,13 +42,13 @@ export default function ZamoffADRLanding() {
 
         <div className="relative z-20 max-w-6xl mx-auto px-6 text-center text-white">
           {/* Intrinsic size to avoid CLS; 1:1 container keeps the circle */}
-          <div className="w-80 h-80 overflow-hidden rounded-full mx-auto mb-6 border-4 border-white/20 mt-8">
+          <div className="w-80 h-80 lg:w-96 lg:h-96 overflow-hidden rounded-lg mx-auto mb-6 border-4 border-white/20 mt-8">
             <Image
               src={headshot}
               alt="Mitch Zamoff"
               width={640}
               height={640}
-              className="object-cover object-top" // moves crop focus up
+              className="object-cover object-top -mt-4" // moves crop focus up
               sizes="320px"
               placeholder="blur"
             />
