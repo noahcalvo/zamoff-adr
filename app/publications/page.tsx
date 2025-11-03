@@ -5,6 +5,11 @@ import { Contact } from "@/components/ui/contact"
 
 const publications = [
   {
+    title: "What's an ADR?",
+    publication: "TIME magazine",
+    year: 2025,
+  },
+  {
     title: "The FAA's Silence on Arbitral Disclosures: A Pressing Problem in the Social Media Age",
     publication: "THE FEDERAL ARBITRATION ACT: SUCCESSES, FAILURES, AND A ROADMAP FOR REFORM (Cambridge University Press)",
     year: 2025,
