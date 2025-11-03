@@ -135,7 +135,7 @@ export default function ZamoffADRLanding() {
                   Areas of Expertise
                 </h2>
               </Link>
-              <p className="text-xl text-gray-600">Substantial ADR Experience Across Diverse Practice Areas</p>
+              <p className="text-xl text-gray-600">Significant ADR Experience Across Diverse Practice Areas</p>
             </div>
 
             <div className="flex gap-6 flex-wrap justify-center">
